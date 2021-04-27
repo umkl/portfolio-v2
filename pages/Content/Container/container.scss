@@ -1,0 +1,120 @@
+@import "./../../../scss/variables.scss";
+
+.ug-container {
+  --scale-rate:1.1;
+  --font-scale-rate:1.5;
+  --width: 80%;
+  --min-height: fit-content;
+
+  position: relative;
+  width: var(--width);
+  height: var(--min-height);
+
+  border: 2px solid white;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px;
+  border-radius: 10px;
+  animation: background-color 2s;
+  // padding: relative;
+  transition: width .3s ease-in-out, height .3s ease-in-out;
+  // transition: width .3s ease-in-out;
+
+  // transition: zoom .3s;
+  // transition: transform .3s;
+  // transition: height .3s;
+  // transition: zoom .3s;
+}
+
+.ug-container:hover{
+  
+    width: calc(var(--scale-rate)*var(--width));
+    height: calc(var(--scale-rate)*var(--min-height));
+    .ug-container-heading{
+      font-size: calc(var(--font-scale-rate)*var(--heading-font-size));
+    }
+    .ug-container-small_description{
+      font-size: calc(var(--font-scale-rate)*var(--small_description-font-size));
+    }
+    cursor: pointer;
+  //   height: calc(var(--scale-rate)*var(--min-height));
+  // transform: scale(1.1) translateX(-50%);
+  // transform: translateX(-50%) scale(1.15, 1.3);
+  // transform: scale(var(--scale-rate));
+  // display: inline-block;
+  // object-fit: cover;
+  // width: 90%;
+
+  // zoom: 130%;
+
+  // height: 400px;
+  // font-size: large;
+  // position: relative;
+  // width: 
+}
+
+.ug-container-heading {
+  --heading-font-size: 2em;
+  // font-family: YanoneKaffeesatz-Bold;
+  font-family: ZCOOL_QingKe_HuangYou;
+  transition: font-size .3s ease-in-out;
+  font-size: 2em;
+  display: inline-block;
+  color: white;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+
+.ug-container-small_description {
+  --small_description-font-size: 1em;
+  
+  font-family: ZCOOL_QingKe_HuangYou;
+  outline: none;
+  transition: font-size .3s ease-in-out;
+  font-size: 1em;
+  color: white;
+  display: block;
+  margin: 20px;
+  top: 25px;
+  left: 50px;
+  max-width: 400px;
+}
+
+.container,
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  display: flex;
+}
+
+.wrapper {
+  height: 150px;
+  width: 150px;
+  background-color: #666;
+}
+
+.innerBox {
+  width: 80px;
+  height: 80px;
+  padding: 8px;
+  background-color: #222;
+  display: none;
+}
+
+.container.show .innerBox {
+  // display: block;
+}
+
+a{
+  text-decoration: none;
+}
+

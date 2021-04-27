@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "ZCOOL_QingKe_HuangYou";
+  font-weight: regular;
+  src: url("./../../assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
+}
+
+.ug-login {
+  color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  .ug-login-logo {
+    position: relative;
+    left: 50%;
+    margin: 0 0 50px 0;
+    width: fit-content;
+    transform: translateX(-50%);
+  }
+  .ug-login-elements {
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ug-login-box {
+  border-radius: 15px;
+  border: 2px solid white;
+  height: 400px;
+  width: 340px;
+  position: relative;
+  .ug-login-name {
+    position: relative;
+    font-family: "ZCOOL_QingKe_HuangYou";
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+    height: 100px;
+  }
+  .ug-login-form {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    text-align: center;
+
+    .ug-login-form-input {
+      position: relative;
+      font-family: "ZCOOL_QingKe_HuangYou";
+      background-color: transparent;
+      border: 2px solid white;
+      text-decoration: none;
+      color: white;
+      padding: 0px 20px;
+      font-size: 20px;
+      border-radius: 15px;
+      height: 50px;
+      width: 300px;
+      box-sizing: border-box;
+      margin: 5px auto;
+      // cursor: none;
+      outline: none;
+    }
+    .ug-login-form-submit {
+      position: relative;
+      &:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+      font-family: "ZCOOL_QingKe_HuangYou";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      color: white;
+      padding: 0px 20px;
+      font-size: 20px;
+      border: 2px solid white;
+      border-radius: 15px;
+      height: 50px;
+      width: 300px;
+      text-align: center;
+      margin: 5px auto;
+      margin-top: 40px;
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .ug-login {
+    height: 700px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ug-login {
+    width: 500px;
+  }
+}
+
+.status-alert {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // pointer-events: none;
+  z-index: 100;
+  .alert-box {
+    background-color: black;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 15px;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-content:stretch;
+    // justify-content: space-between;
+    .alert-error {
+      flex: 1;
+      font-family: "ZCOOL_QingKe_HuangYou";
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+      border-radius: 10px;
+      line-height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      p{
+        color: white;
+      }
+    }
+    .alert-success {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex: 1;
+      font-family: "ZCOOL_QingKe_HuangYou";
+      font-size: 20px;
+      width: 60%;
+      text-align: center;
+      position: relative;
+      border-radius: 10px;
+      line-height: 30px;
+      p{
+        width: 60%;
+        color: white;
+      }
+      
+    }
+    .alert-buttons {
+      display: flex;
+      align-items: stretch;
+      font-family: "ZCOOL_QingKe_HuangYou";
+      width: 80%;
+      color: white;
+      width: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+      a {
+        text-decoration: none;
+      }
+      .alert-ok {
+        flex: 1;
+        font-family: "ZCOOL_QingKe_HuangYou";
+        margin: 5px;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 3px;
+        height: 40px;
+        text-decoration: none !important;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        background-color: transparent;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+      .alert-contact {
+        flex: 1;
+        font-family: "ZCOOL_QingKe_HuangYou";
+        margin: 5px;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 3px;
+        color: white;
+        a{
+          color: white;
+        }
+        // a:visited { 
+        //   text-decoration: none; 
+        //   color: white; 
+        //  }
+        height: 40px;
+        text-decoration: none !important;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        background-color: transparent;
+        &:hover {
+          background-color: white;
+          color: black;
+          a{
+            color: white;
+          }
+          a:visited{
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

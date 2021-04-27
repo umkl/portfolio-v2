@@ -1,0 +1,351 @@
+@font-face {
+  font-family: "ZCOOL_QingKe_HuangYou";
+  font-weight: regular;
+  src: url("./../../assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
+}
+
+//mailStatus contact
+.ug-contact-mailStatus {
+  position: fixed;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+
+  .ug-contact-mailStatus-box {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    color: white;
+    transform: translate(-50%, -50%);
+    p {
+      font-family: "ZCOOL_QingKe_HuangYou";
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+    }
+    button {
+      height: 50%;
+      width: 50%;
+      outline: none;
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      border-radius: 15px;
+      height: 50px;
+      font-size: 1.4em;
+      font-family: "ZCOOL_QingKe_HuangYou";
+      // cursor: none;
+      &:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//main contact
+.ug-contact {
+  background-repeat: repeat;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+
+  .ug-contact-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    .ug-contact-links {
+
+      font-family: "ZCOOL_QingKe_HuangYou";
+      margin-left: 100px;
+      position: relative;
+      .ug-contact-links-pos {
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        .ug-contact-container-line {
+          font-size: 40px;
+          font-family: YanoneKaffeesatz-Regular;
+          margin: 70px 0px;
+          color: white;
+          text-align: left;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          img {
+            margin: 5px 20px;
+          }
+          .ug-content-links-div-text {
+            font-family: "ZCOOL_QingKe_HuangYou";
+            margin: 5px 10px;
+            width: fit-content;
+            min-width: 300px;
+          }
+          .ug-contact-links-divider {
+            margin: 5px 10px;
+            position: relative;
+            width: 1px;
+            height: 40px;
+            background-color: white;
+          }
+          .ug-contact-links-div {
+            margin: 0px 10px;
+            height: 50px;
+            width: fit-content;
+            overflow: hidden;
+            .ug-contact-linkds-div-link-wrap {
+              position: relative;
+              .ug-contact-linkds-div-link-wrap-username {
+                position: absolute;
+              }
+              .ug-contact-linkds-div-link-wrap-username {
+                position: absolute;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ug-contact-frame {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ug-contact-input {
+      font-family: "ZCOOL_QingKe_HuangYou";
+      position: relative;
+      color: white;
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .ug-contact-input-heading {
+        font-family: "ZCOOL_QingKe_HuangYou";
+        flex-grow: 1;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 30px 0px;
+      }
+
+      .ug-contact-input-box {
+        font-family: "ZCOOL_QingKe_HuangYou";
+        margin: 0 auto;
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        .ug-contact-input-box-input {
+          position: relative;
+          margin: 5px auto;
+          padding: 0px 20px;
+          box-sizing: border-box;
+          width: 300px;
+          height: 50px;
+          background-color: transparent;
+          border-radius: 15px;
+          border: 2px solid white;
+          color: white;
+          font-family: "ZCOOL_QingKe_HuangYou";
+          font-size: 20px;
+          text-decoration: none;
+          outline: none;
+        }
+        .ug-contact-input-box-input_text {
+          position: relative;
+          font-family: "ZCOOL_QingKe_HuangYou";
+          resize: none;
+          background-color: transparent;
+          border: 2px solid white;
+          text-decoration: none;
+          color: white;
+          padding: 20px 20px;
+          font-size: 20px;
+          border-radius: 15px;
+          height: 200px;
+          width: 300px;
+          box-sizing: border-box;
+          margin: 5px auto;
+          // margin-bottom: 10px;
+          // cursor: none;
+          outline: none;
+        }
+        .ug-contact-input-box-input_submit {
+          position: relative;
+          // transition: background-color color 1.3s;
+          cursor: pointer;
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+          font-family: "ZCOOL_QingKe_HuangYou";
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          color: white;
+          padding: 0px 20px;
+          font-size: 20px;
+          border: 2px solid white;
+          border-radius: 15px;
+          height: 50px;
+          width: 300px;
+          text-align: center;
+          margin: 5px auto;
+        }
+      }
+    }
+  }
+}
+
+.ug-contact-divider {
+  height: 70vh;
+  width: 1.2px;
+  background-color: white;
+  z-index: 2;
+}
+
+// @media only screen and (max-width: 800px) {
+//   .ug-contact {
+//     height: 100%;
+//     position: absolute;
+//     .ug-contact-container {
+//       flex-direction: column;
+//       background-color: blue;
+//       height: fit-content;
+//       justify-content: flex-start;
+//       align-content: flex-start;
+//       position: absolute;
+//       .ug-contact-frame{
+//         height: fit-content;
+//         width: 100%;
+//       }
+//     }
+//   }
+//   .ug-contact-links {
+//     position: relative;
+//   }
+//   .ug-contact .ug-contact-container .ug-contact-divider {
+//     position: relative;
+//     width: 80vw;
+//     height: 1px;
+//     background-color: white;
+//   }
+// }
+
+@media only screen and (max-height: 1000px) and (max-width: 1000px) {
+  .ug-contact {
+    height: fit-content;
+    position: absolute;
+    .ug-contact-container {
+      display: flex;
+      height: 1500px;
+      .ug-contact-frame{
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        height: fit-content;
+        width: 100%;
+        }
+      .ug-contact-links{
+        height: fit-content;
+        position: relative;
+      }
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      transform: translate(0, 0);
+      top: 0;
+      left: 0;
+      margin-top: 50px;
+    }
+    .ug-contact-input {
+      position: relative;
+    }
+  }
+  .ug-contact .ug-contact-container .ug-contact-divider {
+    position: relative;
+    width: 80vw;
+    height: 1px;
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ug-contact {
+    height: fit-content;
+    position: absolute;
+    .ug-contact-container {
+      display: flex;
+      height: 1500px;
+      .ug-contact-frame{
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        height: fit-content;
+        width: 100%;
+        }
+      .ug-contact-links{
+        height: fit-content;
+        position: relative;
+      }
+
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      transform: translate(0, 0);
+      top: 0;
+      left: 0;
+      margin-top: 50px;
+    }
+    .ug-contact-input {
+      position: relative;
+    }
+  }
+  .ug-contact .ug-contact-container .ug-contact-divider {
+    position: relative;
+    width: 80vw;
+    height: 1px;
+    background-color: white;
+  }
+}
+
+// @media only screen and (max-height: 800px) and (min-width: 500px){
+//   .ug-contact{
+//     height: 800px;
+//   }
+// }

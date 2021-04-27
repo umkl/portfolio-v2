@@ -1,0 +1,150 @@
+.ug-project {
+  position: absolute;
+  font-family: ZCOOL_QingKe_HuangYou;
+
+  width: 100%;
+  // background-color: transparent;
+  border-radius: 15px;
+  border: 2px solid white;
+  color: white;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+
+
+  .ug-project-title {
+    font-size: 5em;
+  }
+  .ug-project-description {
+    font-size: 2em;
+    max-width: 90%;
+    margin: 50px 30px;
+    overflow: hidden;
+    line-break:initial;
+    padding-left: 4px;
+  }
+  .ug-project-slogan {
+    font-size: 2.4em;
+    
+    margin: 20px;
+  }
+  .ug-project-link {
+    position: absolute;
+    font-size: 1.8em;
+    margin: 10px;
+    
+
+    .ug-project-contact-border {
+      // white-space: nowrap;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid white;
+      margin: 0 5px;
+      width: fit-content;
+      display: inline-block;
+      // justify-content: center;
+      // align-items: center;
+      cursor: pointer;
+      padding: 4px;
+      &:hover{
+        background-color: white;
+        a{
+          
+          color:black;
+        }
+      } 
+    }
+  }
+}
+
+.ug-trailer {
+  position: relative;
+  font-family: ZCOOL_QingKe_HuangYou;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  .ug-project-title {
+    font-size: 2em;
+    margin: 20px;
+  }
+  .ug-project-you {
+    font-size: 1.1em;
+    margin: 20px;
+  }
+  .ug-project-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    .ug-project-contact-first {
+        margin: 0px 10px;
+    }
+  }
+}
+
+.text{
+  width: 70%;
+  height: fit-content;
+}
+
+.image{
+  position: relative;
+  width: 50%;
+  margin: 20px;
+  .image-class{
+    position: relative;
+    display: block;
+    width : desired_width;
+    height: 600px;  
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 1600px){
+  .ug-project {
+    font-family: ZCOOL_QingKe_HuangYou;
+    border-radius: 15px;
+    border: 2px solid white;
+    color: white;
+    
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    padding: 10px;
+    .ug-project-title {
+      margin: 3px;
+      font-size: 5em;
+    }
+    .ug-project-description {
+      margin: 20px;
+    }
+  }
+}
+
+
+@media only screen and (max-height: 500px){
+  .ug-trailer{
+    height: 500px;
+  }
+}
+
+a:visited { 
+  text-decoration: none; 
+  color: white; 
+ }

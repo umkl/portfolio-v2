@@ -1,0 +1,79 @@
+@font-face{
+  font-family: 'ZCOOL_QingKe_HuangYou';
+  font-weight: regular;
+  src:url("./../../assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
+}
+
+.ug-content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  .search-bar{
+    width: 70%;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .ug-btn-search {
+      font-family: 'ZCOOL_QingKe_HuangYou';
+      position: relative;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      color: white;
+      .ug-btn-search-input{
+        font-family: 'ZCOOL_QingKe_HuangYou';
+        width: 100%;
+        font-size: 2em;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 30px;
+        ::placeholder{
+          font-size: 1.7em;
+        }
+      }
+      .ug-btn-search_icon{
+        position: relative;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ug-container-recents_heading{
+  font-family: ZCOOL_QingKe_HuangYou;
+  position: relative;
+  color: white;
+  font-size: 2em;
+}
+
+.ug-loading {
+  // font-family: AlteSchwabacher;
+  font-family: ZCOOL_QingKe_HuangYou;
+  font-size: 60px;
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media only screen and (max-width: 600px){
+  .ug-content{
+    width: 600px;
+  }
+}
+
+@media only screen and (max-height: 600px){
+  .ug-content{
+    height: 600px;
+  }
+}
