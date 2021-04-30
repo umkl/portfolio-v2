@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSpring, config, animated as a } from "react-spring";
 import emailjs from "emailjs-com";
 
-import UgLink from "./Link/link.jsx";
+import UgLink from "../../components/contactLink/contactlink.jsx";
 import InstagramLogo from "./../../assets/Instagram-Logo.png";
 import FiverrLogo from "./../../assets/Fiverr-Logo.png";
 import FacebookLogo from "./../../assets/Facebook-Logo.png";

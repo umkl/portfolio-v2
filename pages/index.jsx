@@ -1,64 +1,80 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import UgArrow from "../../shared/arrow/arrow.jsx";
+import UgBar from "../../shared/bar/bar.jsx";
+import UgAboutCard from "./Foyer/about/about.jsx";
+import useBreakpointInText from "../utils/useBreakpointInText.jsx";
+import useOnScreen from "../utils/useOnScreen.jsx";
+import FullLogo from "./../../assets/UNGAR-FULL.svg";
+import { AnimatePresence, motion } from "framer-motion";
+import { useSpring, useSprings, animated as a } from "react-spring";
+import { Helmet } from 'react-helmet'
+import "./foyer.module.scss";
 
-export default function Home() {
+export default function Foyer() {
+  const [isLoaded, setLoaded] = useState(false);
+
+  const ugFoyerNameSpring = useSpring({
+    opacity: isLoaded ? 1 : 0,
+    marginTop: isLoaded ? 0 : -500,
+  });
+
+  const ugFoyerAboutHeadingSpring = useSpring({
+    opacity: isLoaded ? 1 : 0,
+    marginTop: isLoaded ? 0 : -100,
+  });
+
+  const [, setY] = useSpring(() => ({ y: 0 }));
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          what a group
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{''}
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+    <>
+      <Helmet>
+        <title>Ungar | Blogging, Programming and Self-improvement</title>
+        <meta name="description" content="Passionate Programmer (Web- and Appdevelopment) from Austria creating Blogs about self-improvement, Productivity, Programming and Minimalism." />
+        <meta name="theme-color" content="#000000" />
+      </Helmet>
+      <motion.div
+        className="ug-foyer"
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <div className="ug-foyer-intro">
+          <a.div
+            style={ugFoyerAboutHeadingSpring}
+            onClick={() => {
+              setY({
+                y: 500,
+                reset: true,
+                from: { y: window.scrollY },
+                onFrame: (props) => window.scroll(500, props.y),
+              });
+            }}
+            className="ug-foyer-intro-about"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            about
+          </a.div>
+          <div id="ug-foyer-box">
+            <a.div className="ug-foyer-name" style={ugFoyerNameSpring}>
+              <FullLogo width="80%" height="200" className="fullLogo" />
+            </a.div>
+            <div className="ug-foyer-text">Programming and Blogging</div>
+          </div>
         </div>
-      </main>
+        <UgAboutCard
+          heading="Who am I ?"
+          description="My Name is Ungar Michael and my Passion is to develop and organise Softwareprojects. I really love learning new things and improving myself."
+        />
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <UgAboutCard
+          heading="What am I doing ?"
+          description="I plan, design and create Mobile- and Webapplications. I also started to create content in form of blogs and videos in order to share my thoughts, experiences and opinions with an audience.  "
+        />
+      </motion.div>
+    </>
+  );
 }

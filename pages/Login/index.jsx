@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./login.scss";
 import { useSpring, animated as a, config } from "react-spring";
-import useForm from "./../../utils/useForm.jsx";
+import useForm from "../../utils/useForm.jsx";
 import { BlurContext } from "./../../context/BlurContext.js";
 import { Link } from "react-router-dom";
 import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
