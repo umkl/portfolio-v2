@@ -2,15 +2,19 @@ import React, { useEffect, useState, useContext } from "react";
 import { useSpring, animated as a } from "react-spring";
 import UgNav from "./../nav/nav.jsx";
 import UgBtn from "./../btn/btn.jsx";
+import Link from 'next/link'
+
 import { BlurContext } from "./../../context/BlurContext.js";
-import { useLocation } from "react-router-dom";
-import "./bar.scss";
+
+// import { useLocation } from "react-router-dom";
+import { useRouter } from 'next/router'
 
 function UgBar() {
   const [loaded, setLoaded] = useState(false);
   const [pathParts, setPathParts] = useState(0);
   const [blur, setBlur] = useContext(BlurContext);
-  var cLocation = useLocation();
+
+  var router = useRouter();
 
   const barFade = useSpring({
     opacity: loaded ? 1 : 0,
@@ -19,7 +23,7 @@ function UgBar() {
 
   const evaluateAndSetPath = () => {
     setPathParts(() => {
-      return cLocation.pathname.split("/").length - 1;
+      return router.pathname.split("/").length - 1;
     });
   };
   
@@ -30,11 +34,11 @@ function UgBar() {
 
   useEffect(() => {
     evaluateAndSetPath();
-  }, [cLocation.pathname]);
+  }, [router.pathname]);
 
   return (
     <div style={blur != null ? { filter: `blur(${blur})` } : null}>
-      {cLocation.pathname == "/login" || !(pathParts == 1) ? (
+      {router.pathname == "/login" || !(pathParts == 1) ? (
         <div></div>
         ) : (
           <a.div id="ug-bar" style={barFade}>

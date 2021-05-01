@@ -1,19 +1,22 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
-import Head from "./ContentSwitch/ContentSwitch.jsx";
-import Container from "./Container/Container.jsx";
-import { motion } from "framer-motion";
 import { animated as a, useSpring, useTransition } from "react-spring";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  useRouteMatch,
-  useLocation,
-} from "react-router-dom";
-import { SearchContext } from "./../../context/SearchContext";
-import SearchIcon from "./../../assets/Searchicon.png";
-import "./content.scss";
-import { Helmet } from 'react-helmet'
+import Head from "next/head";
+import { motion } from "framer-motion";
+import Image from 'next/image';
+
+// import Head from "../../components/ContentSwitch/ContentSwitch.jsx";
+
+import Container from "../../components/Container/container.jsx";
+
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { SearchContext } from "../../context/SearchContext";
+
+// import SearchIcon from "./../../assets/SearchIcon.png";
+
+// import "./content.scss";
+// import { Helmet } from 'react-helmet'
 
 const Content = () => {
   const API_URL = "https://api.ungarmichael.com/contributions";
@@ -27,10 +30,10 @@ const Content = () => {
   const [isActive, setActive] = useState(false);
   const [searchInput, setSearchInput] = useContext(SearchContext);
   const searchRef = useRef();
-  const location = useLocation();
+  const location = useRouter().pathname;
   const searchSpring = useSpring({ width: isActive ? "200px" : "140px" });
-  const fetchData = async () => {
 
+  const fetchData = async () => {
     await fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
@@ -42,8 +45,6 @@ const Content = () => {
         throw error;
       });
   };
-
-  //hooks
 
   useEffect(() => {
     fetchData();
@@ -57,9 +58,6 @@ const Content = () => {
         });
       }
     });
-    // return () => {
-    //   setContributionSearchResults([]);
-    // };
   }, [searchInput]);
 
   useEffect(() => {
@@ -73,8 +71,6 @@ const Content = () => {
       setHeading("results");
     }
   }, [contributionSearchResults]);
-
-  //springs
 
   const springProps = useSpring({
     from: {
@@ -109,9 +105,9 @@ const Content = () => {
 
   return (
     <>
-    <Helmet>
-      <title>Ungar | Contributions</title>
-    </Helmet>
+      <Head>
+        <title>Ungar | Contributions</title>
+      </Head>
       <motion.div
         className="ug-content"
         exit={{ opacity: 1 }}
@@ -125,7 +121,6 @@ const Content = () => {
             width: "100%",
           }}
         ></div>
-
         <div className="search-bar">
           {heading == "recents" ? (
             <div className="ug-container-recents_heading">recents</div>
@@ -134,9 +129,6 @@ const Content = () => {
           ) : heading == "result" ? (
             <div className="ug-container-recents_heading">result</div>
           ) : heading == "noresult" ? (
-            // <div className="ug-container-noresults_heading">
-            //   <p>no results</p>
-            // </div>
             <div className="ug-container-recents_heading">no results</div>
           ) : (
             "error"
@@ -162,7 +154,8 @@ const Content = () => {
               }}
               className="ug-btn-search_icon"
             >
-              <img src={SearchIcon} alt="" height="20px" width="20px" />
+              {/* <img src={SearchIcon} alt="" height="20px" width="20px" /> */}
+              <Image src="./../../assets/SearchIcon.png" height={20} width={20}/>
             </div>
           </a.div>
         </div>

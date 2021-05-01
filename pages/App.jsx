@@ -6,6 +6,7 @@ import Login from "./pages/Login/login.jsx";
 import Error from "./pages/Error/error.js";
 import UgBar from "./shared/bar/bar.jsx";
 import "./scss/App.scss";
+
 import React, {
   useRef,
   useState,
@@ -24,7 +25,9 @@ function App() {
     <div>
       <SearchProvider>
         <BlurProvider>
+          
           <UgBar />
+
           <AnimatePresence>
             <Switch>
               <Route exact path="/" component={Foyer}></Route>
@@ -35,6 +38,7 @@ function App() {
               <Route path="*" exact={true} component={Error}></Route>
             </Switch>
           </AnimatePresence>
+
         </BlurProvider>
       </SearchProvider>
     </div>

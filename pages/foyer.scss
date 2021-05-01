@@ -1,11 +1,16 @@
-@import "./../../scss/variables.scss";
+// @import "./../../scss/variables.scss";
 
 @font-face{
   font-family: 'ZCOOL_QingKe_HuangYou';
   font-weight: regular;
-  src:url("./../../assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
+  src:url("../assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
 }
 
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 
 .ug-foyer {

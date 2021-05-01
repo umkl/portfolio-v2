@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
-import DOMPurify from "dompurify";
-import "./Blog.scss";
-import { Link, useHistory } from "react-router-dom";
-import FullLogoBy from "./../../../assets/UNGAR-by.svg";
-import { useParams } from "react-router-dom";
 import { animated as a, useSpring } from "react-spring";
-import useSubscription from "./../../../utils/useSubscription.jsx";
-import axios from "axios";
-import { Helmet } from "react-helmet";
+import DOMPurify from "dompurify";
+import Head from "next/head";
+
+import Link from "next/link";
+import { useRouter } from "next/router";
+// import { Link, useHistory } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+
+import FullLogoBy from "./../../assets/UNGAR-by.svg";
+
+import useSubscription from "../../utils/useSubscription";
+
+// import axios from "axios";
+
 
 const Blog = (props) => {
   const {
@@ -19,13 +25,15 @@ const Blog = (props) => {
   } = useSubscription();
 
   const API_URL = "https://api.ungarmichael.com/contributions";
-  const history = useHistory();
+
+  const router = useRouter();
+
   const [blur, setBlur] = useState(0);
   const [blog, setBlog] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [showSubscribeField, setShowSubscribeField] = useState(false);
 
-  let { blogID } = useParams();
+  let { blogID } = router.query.name;
 
   const blurSpring = useSpring({
     filter: blur == null ? "blur(0px)" : `blur(${blur}px)`,
@@ -91,9 +99,9 @@ const Blog = (props) => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>ungarmichael | pretest</title>
-      </Helmet>
+      </Head>
       {showSubscribeField ? (
         <a.div style={fadeInFromTop} className="subscribeField">
           <div className="subscribeBox">

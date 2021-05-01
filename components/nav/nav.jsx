@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./nav.scss";
-import { Link, useLocation} from "react-router-dom";
+// import { Link, useLocation} from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
 
 export default function UgNav() {
+  const router = useRouter();
   const [varClicked, setClicked] = useState({
     1: false,
     2: false,
@@ -11,7 +13,8 @@ export default function UgNav() {
     4: false,
     5: false,
   });
-  var cLocation = useLocation();
+
+  var cLocation = router.pathname;
 
   function changeClickedTo(num) {
     setClicked({
@@ -33,16 +36,15 @@ export default function UgNav() {
       changeClickedTo(4);
     }
     return () => {};
-  }, [cLocation.pathname]);
+  }, [cLocation]);
 
-  if (location.pathname == "/login") {
+  if (cLocation == "/login") {
     return (
       <div className="ug-nav-link-single_container">
-        <Link className="ug-nav-link" to="/">
-          <Logo
-            height="120px"
-            width="120px"
-          />
+        <Link className="ug-nav-link" href="/">
+          <a>
+            <Logo height="120px" width="120px" />
+          </a>
         </Link>
       </div>
     );
@@ -50,63 +52,71 @@ export default function UgNav() {
     return (
       <nav id="ug-nav-bar">
         <div className="ug-nav-element">
-          <Link className="ug-nav-link" to="/">
+          <Link className="ug-nav-link" href="/">
             {/* <img className="ug-nav-link-icon" src={UngarLogoURL} width="50px" height="50px" stroke="red"/> */}
-            <Logo
-              height="50px"
-              width="50px"
-              className={
-                varClicked[1]
-                  ? "ug-nav-link-logo-true"
-                  : "ug-nav-link-logo-false"
-              }
-            />
+            <a>
+              <Logo
+                height="50px"
+                width="50px"
+                className={
+                  varClicked[1]
+                    ? "ug-nav-link-logo-true"
+                    : "ug-nav-link-logo-false"
+                }
+              />
+            </a>
           </Link>
         </div>
 
         <div className="ug-nav-element">
-          <Link className="ug-nav-link" to="/content">
-            <span
-              className={
-                varClicked[2]
-                  ? "ug-nav-element-sub ug-nav-element-selected_true"
-                  : "ug-nav-element-sub ug-nav-element-selected_false"
-              }
-            >
-              content
-            </span>
+          <Link className="ug-nav-link" href="/content">
+            <a>
+              <span
+                className={
+                  varClicked[2]
+                    ? "ug-nav-element-sub ug-nav-element-selected_true"
+                    : "ug-nav-element-sub ug-nav-element-selected_false"
+                }
+              >
+                content
+              </span>
+            </a>
           </Link>
         </div>
 
         <div className="ug-nav-element">
-          <Link className="ug-nav-link" to="/projects">
-            <span
-              className={
-                varClicked[3]
-                  ? "ug-nav-element-sub ug-nav-element-selected_true"
-                  : "ug-nav-element-sub ug-nav-element-selected_false"
-              }
-            >
-              projects
-            </span>
+          <Link className="ug-nav-link" href="/projects">
+            <a>
+              <span
+                className={
+                  varClicked[3]
+                    ? "ug-nav-element-sub ug-nav-element-selected_true"
+                    : "ug-nav-element-sub ug-nav-element-selected_false"
+                }
+              >
+                projects
+              </span>
+            </a>
           </Link>
         </div>
 
         <div className="ug-nav-element">
           <Link
             className="ug-nav-link"
-            to="/contact"
+            href="/contact"
             // onClick={() => changeClickedTo(3)}
           >
-            <span
-              className={
-                varClicked[4]
-                  ? "ug-nav-element-sub ug-nav-element-selected_true"
-                  : "ug-nav-element-sub ug-nav-element-selected_false"
-              }
-            >
-              contact
-            </span>
+            <a>
+              <span
+                className={
+                  varClicked[4]
+                    ? "ug-nav-element-sub ug-nav-element-selected_true"
+                    : "ug-nav-element-sub ug-nav-element-selected_false"
+                }
+              >
+                contact
+              </span>
+            </a>
           </Link>
         </div>
       </nav>

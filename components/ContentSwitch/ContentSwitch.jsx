@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, useRouteMatch} from 'react-router-dom';
-import Content from "../content.jsx";
-import Blog from "../Blog/Blog.jsx"
+import Content from "../../pages/Content/index.jsx";
+import Blog from "../../pages/Content/[blog].jsx"
 
 const ContentSwitch = () => {
     const {path, url} = useRouteMatch()
