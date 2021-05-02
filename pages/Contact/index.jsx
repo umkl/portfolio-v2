@@ -12,7 +12,7 @@ import FacebookLogo from "./../../assets/Facebook-Logo.png";
 // import TwitterLogo from "./../../assets/Twitter-Logo.png";
 import GithubLogo from "./../../assets/GitHub-Logo.png";
 import LinkedinLogo from "./../../assets/Linkedin-Logo.png";
-import { BlurContext } from "./../../context/BlurContext.js";
+import { BlurContext } from "../../context/BlurContext.js";
 import { Helmet } from "react-helmet";
 
 export default function Contact() {

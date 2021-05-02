@@ -19,7 +19,8 @@ import { SearchContext } from "../../context/SearchContext";
 // import { Helmet } from 'react-helmet'
 
 const Content = () => {
-  const API_URL = "https://api.ungarmichael.com/contributions";
+  // const API_URL = "https://api.ungarmichael.com/contributions";
+  const API_URL = "http://localhost:8080/contributions";
   const [contributions, setContributions] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
   const [fetchingErrorStatus, setFetchingErrorStatus] = useState(false);
@@ -155,7 +156,7 @@ const Content = () => {
               className="ug-btn-search_icon"
             >
               {/* <img src={SearchIcon} alt="" height="20px" width="20px" /> */}
-              <Image src="./../../assets/SearchIcon.png" height={20} width={20}/>
+              <Image src="/../../assets/Searchicon.png" height={20} width={20}/>
             </div>
           </a.div>
         </div>
