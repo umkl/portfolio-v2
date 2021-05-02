@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { animated as a, useSpring, useRef, config } from "react-spring";
-import "./../contact.scss";
 
 const UgLink = (props) => {
   const contactSpring = useSpring({

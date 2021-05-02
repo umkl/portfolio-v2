@@ -6,6 +6,8 @@ import "./content/Blog/Blog.scss";
 
 import "./projects/projects.scss"
 
+import "./contact/contact.scss";
+
 import "./../components/about/about.scss";
 import "./../components/bar/bar.scss";
 import "./../components/btn/btn.scss";
@@ -14,7 +16,10 @@ import "./../components/Container/container.scss";
 import "./../components/about/about.scss";
 import "./../components/project/project.scss";
 
+import "./Login/login.scss"
+
 import "./global.scss";
+import "./variables.scss";
 
 
 //provider

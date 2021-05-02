@@ -43,7 +43,7 @@ export default function UgNav() {
       <div className="ug-nav-link-single_container">
         <Link className="ug-nav-link" href="/">
           <a>
-            <Logo height="120px" width="120px" />
+            <Logo height="120px" width="120px"/>
           </a>
         </Link>
       </div>
@@ -58,6 +58,8 @@ export default function UgNav() {
               <Logo
                 height="50px"
                 width="50px"
+                stroke="green"
+                fill="red"
                 className={
                   varClicked[1]
                     ? "ug-nav-link-logo-true"

@@ -1,4 +1,4 @@
-@import "../../style/variables.scss";
+@import "./../../pages/variables.scss";
 
 @font-face {
   font-family: "YanoneKaffeesatz-Medium";
@@ -40,28 +40,28 @@
       font-weight: regular;
     }
     .ug-nav-element-selected_true {
-      color: $ug-nav-element-selected_true;
+      color: #FFFFFF;
     }
     .ug-nav-element-selected_false {
-      color: $ug-nav-element-selected_false;
+      color: #a3a3a3;
       transition: color 1s;
     }
     .ug-nav-link {
       text-decoration: none;
       .ug-nav-link-logo-true {
         path {
-          stroke: $ug-nav-element-selected_true;
+          stroke: #FFFFFF;
         }
       }
       .ug-nav-link-logo-false {
         path {
-          stroke: $ug-nav-element-selected_false;
+          stroke: #e90000;
           transition: stroke 1s;
         }
-      }
-      .ug-nav-link-logo-false:hover {
-        path {
-          stroke: white;
+        &:hover {
+          path {
+            stroke: #FFFFFF;
+          }
         }
       }
     }
