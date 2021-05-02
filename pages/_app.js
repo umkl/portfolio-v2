@@ -1,8 +1,10 @@
 //style files
 import "./foyer.scss";
 
-import "./Content/content.scss";
-import "./Content/Blog/Blog.scss";
+import "./content/content.scss";
+import "./content/Blog/Blog.scss";
+
+import "./projects/projects.scss"
 
 import "./../components/about/about.scss";
 import "./../components/bar/bar.scss";
@@ -10,6 +12,7 @@ import "./../components/btn/btn.scss";
 import "./../components/nav/nav.scss";
 import "./../components/Container/container.scss";
 import "./../components/about/about.scss";
+import "./../components/project/project.scss";
 
 import "./global.scss";
 

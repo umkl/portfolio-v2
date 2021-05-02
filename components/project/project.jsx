@@ -1,8 +1,9 @@
 import React from "react";
-import "./project.scss";
-import { Link } from "react-router-dom";
-import { animated as a } from "react-spring";
 
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { animated as a } from "react-spring";
 
 const UgProject = (props) => {
 

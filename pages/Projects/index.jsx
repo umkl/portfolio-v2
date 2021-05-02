@@ -8,15 +8,16 @@ import React, {
 import { AnimatePresence, motion } from "framer-motion";
 import { config, useTransition, useSpring, animated as a } from "react-spring";
 import _uniqueId from "lodash/uniqueId";
-import UgProject from "./Project/project.jsx";
-import "./projects.scss";
-import NeighborooImage from "./../../assets/Neighboroo/NeighborooMockup.png";
-import trailerPlaceHolder from "./../../assets/Neighboroo/NeighborooMockup.png";
-import { Helmet } from 'react-helmet'
+import Head from "next/head";
+import Image from 'next/image';
+
+import UgProject from "../../components/project/project.jsx";
+// import NeighborooImage from "/assets/Neighboroo/NeighborooMockup.png";
+// import trailerPlaceHolder from "/assets/Neighboroo/NeighborooMockup.png";
 
 const Projects = () => {
   //local projects
-  const imageArray = [NeighborooImage, trailerPlaceHolder];
+  // const imageArray = [NeighborooImage, trailerPlaceHolder];
   const projectsJSON = [
     {
       // "_id" : ObjectId("5fa14938ee9eac91770b019b"),
@@ -26,7 +27,7 @@ const Projects = () => {
       Description:
         "Neighboroo is a iOS and Android-application which is built for getting in touch with your neighbors because especially during these hard times this can be quite hard. The whole system is divided into four categories: Messenger, Selling, Transport, and Service. In the Messenger you are able to chat with your neighbors. The Trading section is for selling goods. Car-sharing can be done in the Transport section and the service section is for Offering and receiving simple jobs.",
       Link: "Link to the Github Project",
-      Image: require("./../../assets/Neighboroo/NeighborooMockup.png"),
+      Image: "/assets/Neighboroo/NeighborooMockup.png",
       LinkURL: "https://github.com/ungarmichael/neighboroo",
       ImageID: 0,
     },
@@ -35,7 +36,7 @@ const Projects = () => {
       Title: "Trailer",
       Description: "this is a test 3",
       ImageID: 0,
-      Image: "./../../assets/Neighboroo/NeighborooMockup.png",
+      Image: "/assets/Neighboroo/NeighborooMockup.png",
     },
   ];
 
@@ -74,9 +75,9 @@ const Projects = () => {
   if (!isLoaded) {
     return (
       <>
-        <Helmet>
+        <Head>
           <title>Ungar | Projects from ungarmichael.com</title>
-        </Helmet>
+        </Head>
         <motion.div
           className="ug-projects"
           exit={{ opacity: 1 }}
@@ -90,9 +91,9 @@ const Projects = () => {
   } else {
     return (
       <>
-        <Helmet>
+        <Head>
           <title>Ungar | Projects from ungarmichael.com</title>
-        </Helmet>
+        </Head>
         <motion.div
           className="ug-projects"
           exit={{ opacity: 1 }}
@@ -108,7 +109,7 @@ const Projects = () => {
                   Title={Project.Title}
                   Slogan={Project.Slogan}
                   Link={Project.Link}
-                  Image={imageArray[item]}
+                  Image={Project.Image}
                   Description={Project.Description}
                   LinkURL={Project.LinkURL}
                   key={key}

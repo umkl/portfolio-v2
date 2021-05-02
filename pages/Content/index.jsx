@@ -53,10 +53,21 @@ const Content = () => {
 
   useEffect(() => {
     contributions.map((x) => {
-      if (x.Name.includes(searchInput)) {
+      if (x.Name.includes(searchInput)&&!contributionSearchResults.includes(x)) {
+        // contributionSearchResults.forEach((b)=>{
+        //   if(b.Name == x.Name){
+        //     return;
+        //   }
+        // })
         setContributionSearchResults((prevRes) => {
           return [...prevRes, x];
         });
+      }else{
+        if(contributionSearchResults.includes(x)){
+          var index = contributionSearchResults.indexOf(x);
+          contributionSearchResults.splice(index,1);
+          setContributionSearchResults(contributionSearchResults);
+        }
       }
     });
   }, [searchInput]);
@@ -156,7 +167,7 @@ const Content = () => {
               className="ug-btn-search_icon"
             >
               {/* <img src={SearchIcon} alt="" height="20px" width="20px" /> */}
-              <Image src="/../../assets/Searchicon.png" height={20} width={20}/>
+              <Image src="/assets/Searchicon.png" height={20} width={20}/>
             </div>
           </a.div>
         </div>
