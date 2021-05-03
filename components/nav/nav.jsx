@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 // import { Link, useLocation} from "react-router-dom";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
+import {useSpring}  from "react-spring";
+
+// import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
+import Logo from "./../../assets/UNGAR_NEW_LOGO.jsx";
 
 export default function UgNav() {
   const router = useRouter();
@@ -38,6 +41,9 @@ export default function UgNav() {
     return () => {};
   }, [cLocation]);
 
+  const {colorVal} = useSpring({colorVal: "red"});
+
+
   if (cLocation == "/login") {
     return (
       <div className="ug-nav-link-single_container">
@@ -58,13 +64,12 @@ export default function UgNav() {
               <Logo
                 height="50px"
                 width="50px"
-                stroke="green"
-                fill="red"
-                className={
-                  varClicked[1]
-                    ? "ug-nav-link-logo-true"
-                    : "ug-nav-link-logo-false"
-                }
+                active={varClicked[1]}
+                // stroke={colorVal}
+                // className={
+                //   varClicked[1]
+                //     ? "ug-nav-link-logo-true"
+                //     : "ug-nav-link-logo-false"
               />
             </a>
           </Link>

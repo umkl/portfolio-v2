@@ -46,25 +46,27 @@
       color: #a3a3a3;
       transition: color 1s;
     }
-    .ug-nav-link {
-      text-decoration: none;
-      .ug-nav-link-logo-true {
-        path {
-          stroke: #FFFFFF;
-        }
-      }
-      .ug-nav-link-logo-false {
-        path {
-          stroke: #e90000;
-          transition: stroke 1s;
-        }
-        &:hover {
-          path {
-            stroke: #FFFFFF;
-          }
-        }
-      }
-    }
+    // .ug-nav-link {
+    //   text-decoration: none;
+    //   .ug-nav-link-logo-true {
+    //     stroke: #e90000;
+    //     path {
+    //       stroke: #FFFFFF;
+    //     }
+    //   }
+    //   .ug-nav-link-logo-false {
+    //     stroke: #e90000;
+    //     path {
+          
+    //       transition: stroke 1s;
+    //     }
+    //     &:hover {
+    //       path {
+    //         stroke: #FFFFFF;
+    //       }
+    //     }
+    //   }
+    // }
   }
   .ug-nav-element-selected_false:hover {
     color: white;
