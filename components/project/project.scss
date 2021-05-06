@@ -36,7 +36,6 @@
     font-size: 1.8em;
     margin: 10px;
     
-
     .ug-project-contact-border {
       // white-space: nowrap;
       text-decoration: none;
@@ -87,9 +86,34 @@
     justify-content: center;
     align-items: center;
     
-    
+    .contact-span {
+      // white-space: nowrap;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid white;
+      margin: 0 5px;
+      width: fit-content;
+      display: inline-block;
+      // justify-content: center;
+      // align-items: center;
+      cursor: pointer;
+      padding: 4px;
+      &:hover{
+        background-color: white;
+        a{
+          
+          color:black;
+        }
+      } 
+    }
+
+
     .ug-project-contact-first {
         margin: 0px 10px;
+
+
+
+
     }
   }
 }

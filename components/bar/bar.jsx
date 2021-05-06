@@ -5,8 +5,6 @@ import UgBtn from "./../btn/btn.jsx";
 import Link from 'next/link'
 
 import { BlurContext } from "./../../context/BlurContext.js";
-
-// import { useLocation } from "react-router-dom";
 import { useRouter } from 'next/router'
 
 function UgBar() {

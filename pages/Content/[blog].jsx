@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { animated as a, useSpring } from "react-spring";
-import DOMPurify from "dompurify";
 import Head from "next/head";
-
-import Link from "next/link";
 import { useRouter } from "next/router";
-// import { Link, useHistory } from "react-router-dom";
-// import { useParams } from "react-router-dom";
+import Link from "next/link";
 
+// import DOMPurify from "dompurify";
 import FullLogoBy from "./../../assets/UNGAR-by.svg";
-
 import useSubscription from "../../utils/useSubscription";
 
 // import axios from "axios";
-
-
 const Blog = (props) => {
   const {
     handleSubscriptionChange,
@@ -24,7 +18,8 @@ const Blog = (props) => {
     setSubStatus,
   } = useSubscription();
 
-  const API_URL = "https://api.ungarmichael.com/contributions";
+  // const API_URL = "https://api.ungarmichael.com/contributions";
+  const API_URL = "http://localhost:8080/contributions";
 
   const router = useRouter();
 
@@ -33,7 +28,9 @@ const Blog = (props) => {
   const [loaded, setLoaded] = useState(false);
   const [showSubscribeField, setShowSubscribeField] = useState(false);
 
-  let { blogID } = router.query.name;
+  console.log("lol");
+
+  var blogID = router.query.blog;
 
   const blurSpring = useSpring({
     filter: blur == null ? "blur(0px)" : `blur(${blur}px)`,
@@ -46,13 +43,12 @@ const Blog = (props) => {
 
   useEffect(() => {
     var blogRoute = appendQueryParameter(API_URL, "key", blogID);
-    console.log("blogRoute:" + blogRoute);
     const fetchData = async () => {
       const result = await fetch(blogRoute)
         .then((response) => response.json())
         .then((data) => {
           if (data == null) {
-            history.push("/notfound");
+            router.push("/notfound");
           } else {
             setBlog(data);
             setLoaded(true);
@@ -79,11 +75,7 @@ const Blog = (props) => {
     if (url.length === 0) {
       return;
     }
-
     let rawURL = url;
-
-    // URL with `?` at the end and without query parameters
-    // leads to incorrect result.
     if (rawURL.charAt(rawURL.length - 1) === "?") {
       rawURL = rawURL.slice(0, rawURL.length - 1);
     }
@@ -171,7 +163,9 @@ const Blog = (props) => {
         <div className="Blog-Nav">
           <div className="Hor">
             <div className="Blog-Nav-Back">
-              <Link to="/content">more</Link>
+              <Link href="/content">
+                <a>more</a>
+              </Link>
             </div>
             {!loaded ? (
               <div className="Blog-Nav-Middle">loading...</div>
@@ -199,12 +193,14 @@ const Blog = (props) => {
           </div>
         )}
         <div className="logo">
-          <Link to="/">
-            <FullLogoBy
-              width="250"
-              height="150"
-              className="Blog-Nav-FullLogo-svg"
-            />
+          <Link href="/">
+            <a>
+              <FullLogoBy
+                width="250"
+                height="150"
+                className="Blog-Nav-FullLogo-svg"
+              />
+            </a>
           </Link>
         </div>
       </a.div>

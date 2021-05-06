@@ -1,6 +1,8 @@
 //style files
 import "./foyer.scss";
 
+import "./error/error.scss";
+
 import "./content/content.scss";
 import "./content/Blog/Blog.scss";
 

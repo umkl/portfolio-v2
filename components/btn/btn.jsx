@@ -1,10 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { SearchContext } from "./../../context/SearchContext";
-// import SearchIcon from "./../../assets/Searchicon.png";
-
-// import { Link } from "react-router-dom";
-// import { useLocation } from "react-router-dom";
 
 import Link from "next/link";
 import { useRouter } from "next/router";

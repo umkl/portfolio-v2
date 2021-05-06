@@ -1,12 +1,8 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
-// import { useHistory } from "react-router-dom";
 import { useRouter } from "next/router";
-// import Aos from "aos";
 
 import VisibilitySensor from "react-visibility-sensor";
-
-// import useOnScreen from "../../../utils/useOnScreen.jsx";
 
 const Container = (props) => {
   const ref = useRef();

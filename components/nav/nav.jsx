@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { Link, useLocation} from "react-router-dom";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import {useSpring}  from "react-spring";
-
-// import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
 import Logo from "./../../assets/UNGAR_NEW_LOGO.jsx";
 
 export default function UgNav() {

@@ -7,7 +7,6 @@ import Head from "next/head";
 import FullLogo from "./../assets/UNGAR-FULL.svg";
 
 //local components
-// import { Link } from "react-router-dom";
 // import UgArrow from "../components/arrow/arrow.jsx";
 import UgAboutCard from "./../components/about/about.jsx";
 // import useBreakpointInText from "../utils/useBreakpointInText.jsx";
