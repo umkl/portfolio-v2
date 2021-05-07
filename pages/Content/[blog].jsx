@@ -26,11 +26,10 @@ const Blog = (props) => {
   const [blur, setBlur] = useState(0);
   const [blog, setBlog] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [showSubscribeField, setShowSubscribeField] = useState(false);
-
-  console.log("lol");
+  const [showSubscribeField, setShowSubscribeField] = useState(false); 
 
   var blogID = router.query.blog;
+  console.log(blogID);
 
   const blurSpring = useSpring({
     filter: blur == null ? "blur(0px)" : `blur(${blur}px)`,
@@ -42,12 +41,22 @@ const Blog = (props) => {
   });
 
   useEffect(() => {
+    blogID == undefined ? "" :fetchBlogData()
+  }, [blogID]);
+
+  var fetchBlogData = () => {
     var blogRoute = appendQueryParameter(API_URL, "key", blogID);
     const fetchData = async () => {
       const result = await fetch(blogRoute)
         .then((response) => response.json())
         .then((data) => {
-          if (data == null) {
+          console.log("data json:" + data.Loisl)
+          // try{
+          var notFound = data.Error == "notfound";
+          if(notFound){
+            data = null
+          }
+          if (data == null ) {
             router.push("/notfound");
           } else {
             setBlog(data);
@@ -56,7 +65,7 @@ const Blog = (props) => {
         });
     };
     fetchData();
-  }, []);
+  }
 
   useEffect(() => {
     if (showSubscribeField) {
