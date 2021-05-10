@@ -6,7 +6,7 @@ import "./error/error.scss";
 import "./content/content.scss";
 import "./content/Blog/Blog.scss";
 
-import "./projects/projects.scss"
+import "./projects/projects.scss";
 
 import "./contact/contact.scss";
 
@@ -18,21 +18,24 @@ import "./../components/Container/container.scss";
 import "./../components/about/about.scss";
 import "./../components/project/project.scss";
 
-import "./Login/login.scss"
+import "./Login/login.scss";
 
 import "./global.scss";
 import "./variables.scss";
 
-
 //provider
 import { BlurProvider } from "../context/BlurContext.js";
-import {SearchProvider} from "../context/SearchContext.js";
+import { SearchProvider } from "../context/SearchContext.js";
 
+import Head from "next/head"
 import UgBar from "./../components/bar/bar.jsx";
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <link rel="ungarlogo" href="/assets/Ungar_Website_Icon.ico"/>
+      </Head>
       <SearchProvider>
         <BlurProvider>
           <UgBar />

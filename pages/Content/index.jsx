@@ -53,6 +53,7 @@ const Content = () => {
 
   useEffect(() => {
     contributions.map((x) => {
+      // boolean isFound = searchInput.indexOf(x.Name) != -1 ? true : false;
       if (x.Name.includes(searchInput)&&!contributionSearchResults.includes(x)) {
         // contributionSearchResults.forEach((b)=>{
         //   if(b.Name == x.Name){
