@@ -106,7 +106,7 @@ export default function Contact() {
                   username="@_ungar"
                 />
                 <UgLink
-                  imageSource="/assets/GitHub-Logo.png"
+                  imageSource="/assets/Github-Logo.png"
                   linkHref="https://github.com/ungarmichael"
                   name="Github"
                   username="@ungarmichael"
