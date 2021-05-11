@@ -1,16 +1,4 @@
-@import "./../../pages/variables.scss";
-
-@font-face {
-  font-family: "YanoneKaffeesatz-Medium";
-  font-weight: regular;
-  src: url("./../../assets/fonts/Yanone_Kaffeesatz/static/YanoneKaffeesatz-Medium.ttf");
-}
-
-@font-face {
-  font-family: "ZCOOL_QingKe_HuangYou";
-  font-weight: regular;
-  src: url("./../../assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf");
-}
+@import "./../../styles/variables.scss";
 
 #ug-nav-bar {
   position: relative;
