@@ -1,14 +1,14 @@
 //style files
 import "./foyer.scss";
 
-import "./error.scss";
-
-import "./content/content.scss";
-import "./content/Blog/Blog.scss";
-
-import "./projects/projects.scss";
-
-import "./contact/contact.scss";
+import "../styles/error.scss";
+import "../styles/contact.scss";
+import "../styles/projects.scss";
+import "../styles/Blog.scss";
+import "../styles/content.scss";
+import "../styles/login.scss";
+import "../styles/global.scss";
+import "../styles/variables.scss";
 
 import "./../components/about/about.scss";
 import "./../components/bar/bar.scss";
@@ -17,11 +17,6 @@ import "./../components/nav/nav.scss";
 import "./../components/Container/container.scss";
 import "./../components/about/about.scss";
 import "./../components/project/project.scss";
-
-import "./Login/login.scss";
-
-import "./global.scss";
-import "./variables.scss";
 
 //provider
 import { BlurProvider } from "../context/BlurContext.js";
