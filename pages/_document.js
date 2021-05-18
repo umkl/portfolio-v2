@@ -9,7 +9,7 @@ class UngarDocument extends Document {
     return (
       <Html>
         <Head>
-            <link rel="shortcut icon" href="/static/Ungar_Website_Icon.ico" />
+            <link rel="shortcut icon" href="/assets/Ungar_Website_Icon.ico" />
         </Head>
         <body>
           <Main />
