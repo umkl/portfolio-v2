@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
 
-import useForm from "../../utils/useForm.jsx";
-import { BlurContext } from "../../context/BlurContext.js";
+import useForm from "../utils/useForm.jsx";
+import { BlurContext } from "../context/BlurContext.js";
 
 const Login = () => {
   // const [blur, setBlur] = useContext(BlurContext);

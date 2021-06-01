@@ -2,11 +2,11 @@ import React, { useState, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSpring, config, animated as a } from "react-spring";
 import emailjs from "emailjs-com";
-import UgLink from "../../components/contactLink/contactlink.jsx";
+import UgLink from "../components/contactLink/contactlink.jsx";
 import Head from "next/head";
 import Image from 'next/image';
 
-import { BlurContext } from "../../context/BlurContext.js";
+import { BlurContext } from "../context/BlurContext.js";
 
 export default function Contact() {
   var ungar_email_serviceID = "ungar-gmail";

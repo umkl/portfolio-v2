@@ -6,12 +6,12 @@ import Image from 'next/image';
 
 // import Head from "../../components/ContentSwitch/ContentSwitch.jsx";
 
-import Container from "../../components/Container/container.jsx";
+import Container from "../components/Container/container.jsx";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { SearchContext } from "../../context/SearchContext";
+import { SearchContext } from "../context/SearchContext";
 
 // import SearchIcon from "./../../assets/SearchIcon.png";
 

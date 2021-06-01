@@ -11,7 +11,7 @@ import _uniqueId from "lodash/uniqueId";
 import Head from "next/head";
 import Image from 'next/image';
 
-import UgProject from "../../components/project/project.jsx";
+import UgProject from "../components/project/project.jsx";
 // import NeighborooImage from "/assets/Neighboroo/NeighborooMockup.png";
 // import trailerPlaceHolder from "/assets/Neighboroo/NeighborooMockup.png";
 
