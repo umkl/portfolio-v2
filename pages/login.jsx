@@ -3,7 +3,7 @@ import { useSpring, animated as a, config } from "react-spring";
 import Head from "next/head";
 import Link from "next/link";
 
-import Logo from "./../../assets/UNGAR_NEW_LOGO.svg";
+import Logo from "./../assets/UNGAR_NEW_LOGO.svg";
 
 import useForm from "../utils/useForm.jsx";
 import { BlurContext } from "../context/BlurContext.js";

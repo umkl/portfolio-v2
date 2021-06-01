@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 // import DOMPurify from "dompurify";
-import FullLogoBy from "./../../assets/UNGAR-by.svg";
+import FullLogoBy from "./../assets/UNGAR-by.svg";
 import useSubscription from "../utils/useSubscription";
 
 // import axios from "axios";
