@@ -19,7 +19,7 @@ const Blog = (props) => {
   } = useSubscription();
 
   // const API_URL = "https://api.ungarmichael.com/contributions";
-  const API_URL = "http://localhost:8080/contributions";
+  const API_URL = "https://api.ungarmichael.com/contributions";
 
   const router = useRouter();
 
