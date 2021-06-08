@@ -10,6 +10,12 @@ class UngarDocument extends Document {
       <Html>
         <Head>
             <link rel="shortcut icon" href="/assets/Ungar_Website_Icon.ico" />
+            <link
+              rel="preload"
+              href="/assets/fonts/ZCOOL_QingKe_HuangYou/ZCOOLQingKeHuangYou-Regular.ttf"
+              as="font"
+              crossOrigin=""
+            />
         </Head>
         <body>
           <Main />
