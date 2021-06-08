@@ -8,6 +8,7 @@ import "../styles/content.scss";
 import "../styles/login.scss";
 import "../styles/global.scss";
 import "../styles/variables.scss";
+import "../styles/font.scss";
 
 import "./../components/about/about.scss";
 import "./../components/bar/bar.scss";

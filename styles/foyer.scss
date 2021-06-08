@@ -6,6 +6,24 @@
   transform: translate(-50%,-50%);
 }
 
+.about-introbox{
+  // background-color: blue;
+  max-width: 1000px;
+
+}
+
+.about-greeting{
+  color: white;
+  font-size: 4em;
+  
+  font-family: ZCOOL_QingKe_HuangYou;
+}
+
+.about-introduction{
+  color: white;
+  font-size: 4em;
+  font-family: ZCOOL_QingKe_HuangYou;
+}
 
 .ug-foyer {
   width: 100%;
@@ -66,6 +84,10 @@
 //--- WIDTH ---
 
 @media only screen and (max-width: 1200px) { 
+  .about-introbox{
+    width:90%;
+  }
+  
   .ug-foyer {
     width: 100%;
     position: absolute;
@@ -126,6 +148,19 @@
 
 
 @media only screen and (max-width: 600px) { 
+  .about-introbox{
+    width:80%;
+
+  }
+
+  .about-greeting{
+    font-size: 2em;
+  }
+
+  .about-introduction{
+    font-size: 2em;
+  }
+
   .ug-foyer {
     width: 600px;
     position: absolute;

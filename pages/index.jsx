@@ -71,7 +71,11 @@ export default function Foyer() {
             <div className="ug-foyer-text">Programming and Blogging</div>
           </div>
         </div>
-
+        <div className="about-introbox">
+          <div className="about-greeting"> Hi there ! </div>  
+          <br />
+          <div className="about-introduction"> I`m Michael, a young programmer and designer from Austria focused on creating flawless code and beautiful interfaces for humans. </div>  
+        </div>
         <UgAboutCard
           heading="Who am I ?"
           description="My Name is Ungar Michael and my Passion is to develop and organise Softwareprojects. I really love learning new things and improving myself."

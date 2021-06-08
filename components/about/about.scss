@@ -1,24 +1,22 @@
 .ug-foyer-about {
   height: 600px;
   width: 1100px;
-  // background-color: #86868625;
-  border: 2px solid white;
-  border-radius: 15px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  align-items: flex-start;
+  background-color: blue;
   .ug-foyer-about-heading {
-    height: 100%;
-    width: 80%;
-    font-size: 100px;
+    background-color: red;
+    font-size: 6em;
     font-family: 'ZCOOL_QingKe_HuangYou';
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex: 2;
+    text-align: left;
+    flex: 1;
   }
 
   .ug-foyer-about-divider {
@@ -26,14 +24,13 @@
     position: relative;
     width: 1.2px;
     height: 90%;
-    
   }
   .ug-foyer-about-description {
-    flex: 2;
+    flex: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     height: 100%;
     font-family: 'ZCOOL_QingKe_HuangYou';
     font-size: 20px;
@@ -81,10 +78,8 @@
       p{
         max-width: 100%
       }
-      // background-color: blue;
       margin: 10px 20px;
       font-size: 2em;
-      
     }
     .ug-foyer-about-heading {
       margin: 20px;
