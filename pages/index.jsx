@@ -77,13 +77,20 @@ export default function Foyer() {
           <div className="about-introduction"> I`m Michael, a young programmer and designer from Austria focused on creating flawless code and beautiful interfaces for humans. </div>  
         </div>
         <UgAboutCard
-          heading="Who am I ?"
+          heading="My Journey"
+          subheading="UI/UX-Design"
           description="My Name is Ungar Michael and my Passion is to develop and organise Softwareprojects. I really love learning new things and improving myself."
         />
         <UgAboutCard
-          heading="What am I doing ?"
+          heading="My Goal"
+          subheading=""
           description="I plan, design and create Mobile- and Webapplications. I also started to create content in form of blogs and videos in order to share my thoughts, experiences and opinions with an audience.  "
         />
+        <div className="bottom-bar">
+          <div>2018-now</div>
+          <div>2018-now</div>
+        </div>
+
       </motion.div>
     </>
   );
