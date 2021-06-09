@@ -14,9 +14,7 @@
     font-size: 6em;
     font-family: 'ZCOOL_QingKe_HuangYou';
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+
     flex: 1;
   }
 
@@ -24,6 +22,10 @@
     color: #9d9d9d;
     font-family: 'ZCOOL_QingKe_HuangYou';
     font-size: 2em;
+  }
+
+  .about-heading-box{
+    width: 400px;
   }
 
   .ug-foyer-about-divider {
