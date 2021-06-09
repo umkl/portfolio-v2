@@ -29,7 +29,7 @@ const UgAboutCard = (props) => {
       <a.div style={springProps} ref={ref}>
         <div className="ug-foyer-about">
           <div className="about-heading-box">
-          <div className="ug-foyer-about-subheading">
+            <div className="ug-foyer-about-subheading">
               {/* <span>{props.subheading}</span> */}
               <span>subheading-placeholder</span>
             </div>
