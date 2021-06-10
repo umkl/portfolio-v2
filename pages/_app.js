@@ -10,6 +10,7 @@ import "../styles/global.scss";
 import "../styles/variables.scss";
 import "../styles/font.scss";
 
+
 import "./../components/about/about.scss";
 import "./../components/bar/bar.scss";
 import "./../components/btn/btn.scss";
@@ -17,6 +18,7 @@ import "./../components/nav/nav.scss";
 import "./../components/Container/container.scss";
 import "./../components/about/about.scss";
 import "./../components/project/project.scss";
+import "./../components/bottombar/bottombar.jsx";
 
 //provider
 import { BlurProvider } from "../context/BlurContext.js";

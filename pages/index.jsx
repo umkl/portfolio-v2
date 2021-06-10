@@ -79,7 +79,7 @@ export default function Foyer() {
         <UgAboutCard
           heading="Starting to code"
           subheading="My Journey"
-          description="I was about 14 years old when I got exposed to code for the first time. Back then I just tried to play around with HTML in order to manipulate the static presentation of a website. Soon I started to get interested into the my first object-oriented programming-language: Java. "
+          description="I was about 14 years old when I got exposed to code for the first time. Back then I just tried to play around with HTML in order to manipulate the static presentation of websites. My next two object-oriented programming languages where Java and C#. My preferred frameworks for Web Apps are React and Vue. I also tend to use TypeScript, Scss and the VSCode TextEditor to make my life easier. Due to my high experience in React I also used React Native to create Mobile Apps, but right now I am doing a lot with flutter because it has great support."
         />
         <UgAboutCard
           subheading="Now"
@@ -89,7 +89,7 @@ export default function Foyer() {
         <UgAboutCard
           subheading="Expertise"
           heading="My Focus"
-          description="As I already meanted my current goal is to provide the best experience for clients as a freelancer. "
+          description="I mainly focus on Design & Web Development for optimal digital representation. Besides that I am also capable of implementing Mobile-apps."
         />
         <div className="bottom-bar">
           <div>2018-now</div>
