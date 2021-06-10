@@ -30,8 +30,7 @@ const UgAboutCard = (props) => {
         <div className="ug-foyer-about">
           <div className="about-heading-box">
             <div className="ug-foyer-about-subheading">
-              {/* <span>{props.subheading}</span> */}
-              <span>subheading-placeholder</span>
+              <span>{props.subheading}</span>
             </div>
             <div className="ug-foyer-about-heading">
               <span>{props.heading}</span>

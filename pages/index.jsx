@@ -74,17 +74,22 @@ export default function Foyer() {
         <div className="about-introbox">
           <div className="about-greeting"> Hi there ! </div>  
           <br />
-          <div className="about-introduction"> I`m Michael, a young programmer and designer from Austria focused on creating flawless code and beautiful interfaces for humans. </div>  
+          <div className="about-introduction"> I`m Michael, a young programmer and designer from Upper Austria focused on creating flawless code and beautiful interfaces for humans. </div>  
         </div>
         <UgAboutCard
-          heading="My Journey"
-          subheading="UI/UX-Design"
-          description="My Name is Ungar Michael and my Passion is to develop and organise Softwareprojects. I really love learning new things and improving myself."
+          heading="Starting to code"
+          subheading="My Journey"
+          description="I was about 14 years old when I got exposed to code for the first time. Back then I just tried to play around with HTML in order to manipulate the static presentation of a website. Soon I started to get interested into the my first object-oriented programming-language: Java. "
         />
         <UgAboutCard
-          heading="My Goal"
-          subheading=""
-          description="I plan, design and create Mobile- and Webapplications. I also started to create content in form of blogs and videos in order to share my thoughts, experiences and opinions with an audience.  "
+          subheading="Now"
+          heading="Fast forward"
+          description="Currently my everyday life consists of planning, designing and creating Mobile- and Webapplications. On the side I am also interested into programming microcontrollers and creating innovative projects. "
+        />
+        <UgAboutCard
+          subheading="Expertise"
+          heading="My Focus"
+          description="As I already meanted my current goal is to provide the best experience for clients as a freelancer. "
         />
         <div className="bottom-bar">
           <div>2018-now</div>

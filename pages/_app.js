@@ -35,8 +35,10 @@ export default function MyApp({ Component, pageProps }) {
         <BlurProvider>
           <UgBar />
           <Component {...pageProps} />
+          
         </BlurProvider>
       </SearchProvider>
+
     </>
   );
 }
