@@ -1,10 +1,13 @@
 //npm packages
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef} from "react";
 import { useSpring, useSprings, animated as a } from "react-spring";
 import { AnimatePresence, motion } from "framer-motion";
 // import Link from "next/link";
 import Head from "next/head";
 import FullLogo from "./../assets/UNGAR-FULL.svg";
+
+// import useOnScreen from "../../utils/useOnScreen.jsx"
+import VisibilitySensor from "react-visibility-sensor";
 
 //local components
 // import UgArrow from "../components/arrow/arrow.jsx";
@@ -15,6 +18,7 @@ import UgAboutCard from "./../components/about/about.jsx";
 // import { Helmet } from 'react-helmet'
 
 export default function Foyer() {
+  const ref = useRef();
   const [isLoaded, setLoaded] = useState(false);
 
   const ugFoyerNameSpring = useSpring({
@@ -26,12 +30,21 @@ export default function Foyer() {
     opacity: isLoaded ? 1 : 0,
     marginTop: isLoaded ? 0 : -100,
   });
+  
 
   const [, setY] = useSpring(() => ({ y: 0 }));
 
   useEffect(() => {
     setLoaded(true);
   }, []);
+
+  const [isVisible, setVisible] = useState(false);
+
+  const springProps = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "scale(1)" : "scale(0.3)",
+    config: { duration: 400 },
+  });
 
   return (
     <>
@@ -47,8 +60,8 @@ export default function Foyer() {
         className="ug-foyer"
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}>
-
+        animate={{ opacity: 1 }}
+      >
         <div className="ug-foyer-intro">
           <a.div
             style={ugFoyerAboutHeadingSpring}
@@ -71,11 +84,26 @@ export default function Foyer() {
             <div className="ug-foyer-text">Programming and Blogging</div>
           </div>
         </div>
-        <div className="about-introbox">
-          <div className="about-greeting"> Hi there ! </div>  
-          <br />
-          <div className="about-introduction"> I`m Michael, a young programmer and designer from Upper Austria focused on creating flawless code and beautiful interfaces for humans. </div>  
-        </div>
+        <VisibilitySensor
+          partialVisibility
+          onChange={(isVis) => {
+            if (isVis && isVisible != true) {
+              setVisible(true);
+            }
+          }}
+        >
+          <a.div style={springProps} ref={ref}>
+            <div className="about-introbox">
+              <div className="about-greeting"> Hi there ! </div>
+              <br />
+              <div className="about-introduction">
+                I`m Michael, a young programmer and designer from Upper Austria
+                focused on creating flawless code and beautiful interfaces for
+                humans.
+              </div>
+            </div>
+          </a.div>
+        </VisibilitySensor>
         <UgAboutCard
           heading="Starting to code"
           subheading="My Journey"
@@ -95,7 +123,6 @@ export default function Foyer() {
           <div>2018-now</div>
           <div>2018-now</div>
         </div>
-
       </motion.div>
     </>
   );

@@ -37,7 +37,6 @@ const UgAboutCard = (props) => {
             </div>
           </div>
           {/* <div className="ug-foyer-about-divider"></div> */}
-
           <div className="ug-foyer-about-description">
             <p>{props.description}</p>
           </div>
@@ -47,4 +46,4 @@ const UgAboutCard = (props) => {
   );
 };
 
-export default UgAboutCard;
+export default UgAboutCard; 
