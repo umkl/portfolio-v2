@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { config, useTransition, useSpring, animated as a } from "react-spring";
 import _uniqueId from "lodash/uniqueId";
 import Head from "next/head";
-import Image from 'next/image';
+import Image from "next/image";
 
 import UgProject from "../components/project/project.jsx";
 // import NeighborooImage from "/assets/Neighboroo/NeighborooMockup.png";
@@ -36,8 +36,7 @@ const Projects = () => {
       _id: _uniqueId("prefix-"),
       Title: "Gomodoro",
       Slogan: "Planning time properly.",
-      Description:
-        "timer app",
+      Description: "timer app",
       Link: "Link to the Github Project",
       Image: "/assets/Neighboroo/NeighborooMockup.png",
       LinkURL: "https://github.com/ungarmichael/gomodoro",
@@ -130,26 +129,49 @@ const Projects = () => {
               );
             })}
           </div>
-
-          <div className="ug-project-navigator">
-            {projects.map((x) => {
-              if (x.Title == projects[index].Title) {
-                return (
-                  <div
-                    key={x._id}
-                    className="ug-project-navigator-dot-active"
-                  ></div>
-                );
-              } else {
-                return (
-                  <div
-                    onClick={() => handleIndexChange(x.Title)}
-                    key={x._id}
-                    className="ug-project-navigator-dot"
-                  ></div>
-                );
-              }
-            })}
+          <div className="nav-box">
+            <div className="nav-left">
+              <div
+                className="nav-left-icon arrow"
+                onClick={() => {
+                  if(index!=0){
+                    setIndex(index - 1);
+                  }
+                }}
+              ></div>
+            </div>
+            <div className="ug-project-navigator">
+              {projects.map((x) => {
+                if (x.Title == projects[index].Title) {
+                  return (
+                    <div
+                      key={x._id}
+                      className="ug-project-navigator-dot-active"
+                    ></div>
+                  );
+                } else {
+                  return (
+                    <div
+                      onClick={() => handleIndexChange(x.Title)}
+                      key={x._id}
+                      className="ug-project-navigator-dot"
+                    ></div>
+                  );
+                }
+              })}
+            </div>
+            <div className="nav-right">
+              <div
+                className="nav-left-icon"
+                onClick={() => {
+                  console.log("projectssize"+projects.length)
+                  console.log("index"+index)
+                  if(index < projects.length-1){
+                    setIndex(index + 1);
+                  }
+                }}
+              ></div>
+            </div>
           </div>
         </motion.div>
       </>
