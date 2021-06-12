@@ -32,6 +32,18 @@ const Projects = () => {
       ImageID: 0,
     },
     {
+      // "_id" : ObjectId("5fa14938ee9eac91770b019b"),
+      _id: _uniqueId("prefix-"),
+      Title: "Gomodoro",
+      Slogan: "Planning time properly.",
+      Description:
+        "timer app",
+      Link: "Link to the Github Project",
+      Image: "/assets/Neighboroo/NeighborooMockup.png",
+      LinkURL: "https://github.com/ungarmichael/gomodoro",
+      ImageID: 1,
+    },
+    {
       _id: _uniqueId("prefix-"),
       Title: "Trailer",
       Description: "this is a test 3",
