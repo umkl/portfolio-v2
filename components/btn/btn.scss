@@ -7,7 +7,7 @@
   align-items: center;
   display: flex;
   right: 4%;
-  font-family: ZCOOL_QingKe_HuangYou;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
   font-size: 20px;
   
   .ug-btn-login {
@@ -23,7 +23,7 @@
     cursor: pointer;
   }
   .ug-btn-search {
-    font-family: 'ZCOOL_QingKe_HuangYou';
+    font-family: "ZCOOL QingKe HuangYou", cursive;
     height: 50px;
     width: 50px;
     border-radius: 15px 0px 0px 15px;
@@ -46,7 +46,7 @@
       background-color: transparent;
       color: white;
       font-size: 20px;
-      font-family: 'ZCOOL_QingKe_HuangYou';
+      font-family: "ZCOOL QingKe HuangYou", cursive;
       ::placeholder{
         font-size: 2em;
       }

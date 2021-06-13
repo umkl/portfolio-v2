@@ -28,7 +28,7 @@ export default function UgNav() {
   useEffect(() => {
     if (location.pathname == "/") {
       changeClickedTo(1);
-    } else if (location.pathname == "/blog") {
+    } else if (location.pathname == "/content") {
       changeClickedTo(2);
     } else if (location.pathname == "/projects") {
       changeClickedTo(3);
@@ -73,7 +73,7 @@ export default function UgNav() {
         </div>
 
         <div className="ug-nav-element">
-          <Link className="ug-nav-link" href="/blog">
+          <Link className="ug-nav-link" href="/content">
             <a>
               <span
                 className={

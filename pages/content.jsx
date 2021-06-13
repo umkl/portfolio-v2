@@ -3,7 +3,6 @@ import { animated as a, useSpring, useTransition } from "react-spring";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Image from 'next/image';
-
 // import Head from "../../components/ContentSwitch/ContentSwitch.jsx";
 
 import Container from "../components/Container/container.jsx";
