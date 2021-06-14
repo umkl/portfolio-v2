@@ -14,7 +14,6 @@ import VisibilitySensor from "react-visibility-sensor";
 import UgAboutCard from "./../components/about/about.jsx";
 // import useBreakpointInText from "../utils/useBreakpointInText.jsx";
 // import useOnScreen from "../utils/useOnScreen.jsx";
-
 // import { Helmet } from 'react-helmet'
 
 export default function Foyer() {
@@ -49,7 +48,7 @@ export default function Foyer() {
   return (
     <>
       <Head>
-        <title>Ungar | Blogging, Programming and Self-improvement</title>
+        <title>Ungar | Programmer and Designer from Austria</title>
         <meta
           name="description"
           content="Passionate Programmer (Web- and Appdevelopment) from Austria creating Blogs about self-improvement, Productivity, Programming and Minimalism."
