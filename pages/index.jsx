@@ -119,8 +119,8 @@ export default function Foyer() {
           description="I mainly focus on Design & Web Development for optimal digital representation. Besides that I am also capable of implementing Mobile-apps."
         />
         <div className="bottom-bar">
-          <div>2018-now</div>
-          <div>2018-now</div>
+          <div className="date">2018 - <div className="infinity">&infin;</div></div>
+          <div className="legal">Legal</div>
         </div>
       </motion.div>
     </>

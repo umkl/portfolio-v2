@@ -6,6 +6,37 @@
   transform: translate(-50%,-50%);
 }
 
+.bottom-bar{
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  width: 90%;
+  // background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  text-shadow: 2px 2px grey;
+}
+
+.date{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  // background-color: green;
+  
+  .infinity{
+    
+    // size: 2em;
+    font-size: 25px;
+    // margin:4px;
+    top:-13px;
+    left: 3px;
+    position: relative;
+    // color: red;
+    // margin:20px;
+    // bottom: 5px;
+    
+   }
+}
+
 .about-introbox{
   // background-color: blue;
   max-width: 1000px;
