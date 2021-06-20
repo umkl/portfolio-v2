@@ -1,63 +1,10 @@
-
-
 @mixin center {
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.bottom-bar{
-  font-family: "ZCOOL QingKe HuangYou", cursive;
-  width: 90%;
-  // background-color: blue;
-  // background-color: blue;
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  text-shadow: 2px 2px grey;
-}
-
-.date{
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  // background-color: green;
-  
-  .infinity{
-    
-    // size: 2em;
-    font-size: 25px;
-    // margin:4px;
-    top:-13px;
-    left: 3px;
-    position: relative;
-    // color: red;
-    // margin:20px;
-    // bottom: 5px;
-    
-   }
-}
-
-.about-introbox{
-  // background-color: blue;
-  max-width: 1000px;
-  margin: 0px 20px;
-}
-
-.about-greeting{
-  color: white;
-  font-size: 3.4em;
-  
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  transform: translate(-50%, -50%);
 }
 
 
-
-.about-introduction{
-  color: white;
-  font-size: 3.4em;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
-}
 
 .ug-foyer {
   width: 100%;
@@ -67,7 +14,9 @@
   justify-content: center;
   align-items: center;
   .ug-foyer-intro {
-    height: 100vh;
+    // min-height: 100vh;
+    // min-height: -webkit-fill-available;
+    // height: 100vh;
     width: 100%;
     z-index: 0;
     position: relative;
@@ -96,7 +45,7 @@
       display: inline-block;
       pointer-events: none;
       @include center();
-      .fullLogo{
+      .fullLogo {
         width: 100%;
         height: 200px;
       }
@@ -115,13 +64,51 @@
 }
 
 
+.about-introbox {
+  max-width: 1000px;
+  margin: 0px 20px;
+  margin-left: 50px;
+  .about-greeting {
+    color: white;
+    font-size: 3.4em;
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+  }
+  .about-introduction {
+    color: white;
+    font-size: 3.4em;
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+  }
+}
+
+.bottom-bar {
+  // background-color: green;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  color: white;
+  // text-shadow: 2px 2px grey;
+  .date {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    .infinity {
+      font-size: 25px;
+      top: -13px;
+      left: 3px;
+      position: relative;
+    }
+  }
+}
+
 //--- WIDTH ---
 
-@media only screen and (max-width: 1200px) { 
-  .about-introbox{
-    width:90%;
+@media only screen and (max-width: 1200px) {
+  .about-introbox {
+    width: 90%;
   }
-  
+
   .ug-foyer {
     width: 100%;
     position: absolute;
@@ -130,10 +117,6 @@
     justify-content: center;
     align-items: center;
     .ug-foyer-intro {
-      height: 100vh;
-      width: 100%;
-      z-index: 0;
-      position: relative;
       .ug-foyer-intro-about {
         position: absolute;
         color: rgba(255, 255, 255, 0.5);
@@ -159,7 +142,7 @@
         display: inline-block;
         pointer-events: none;
         @include center();
-        .fullLogo{
+        .fullLogo {
           width: 100%;
           height: 30%;
         }
@@ -168,9 +151,9 @@
           color: rgba(255, 255, 255, 0.75);
           position: relative;
           width: 250px;
-          // background-color: green;
+          height: fit-content;
+          background-color: green;
           text-align: center;
-          font-size: 2em;
           margin: 0 auto;
         }
       }
@@ -178,13 +161,9 @@
   }
 }
 
-
-
-
-@media only screen and (max-width: 600px) { 
-  .about-introbox{
-    width:80%;
-
+@media only screen and (max-width: 600px) {
+  .about-introbox {
+    width: 80%;
   }
 
   // .about-greeting{
@@ -203,10 +182,7 @@
     justify-content: center;
     align-items: center;
     .ug-foyer-intro {
-      height: 100vh;
-      width: 100%;
-      z-index: 0;
-      position: relative;
+      background-color: red;
       .ug-foyer-intro-about {
         position: absolute;
         color: rgba(255, 255, 255, 0.5);
@@ -225,36 +201,32 @@
       }
       #ug-foyer-box {
         position: absolute;
-        width: 50%;
+        width: 100%;
+        // background-color: green;
         color: white;
         padding: 20px;
         display: inline-block;
         pointer-events: none;
         @include center();
-        .fullLogo{
-          width: 100%;
-          height: 100px;
+        .fullLogo {
+          width: 90%;
+          height: 90%;
+          // @include center();
+          margin: 0px auto;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: antiquewhite;
         }
         .ug-foyer-text {
-          font-family: "ZCOOL QingKe HuangYou", cursive;
-          color: rgba(255, 255, 255, 0.75);
-          position: relative;
-          width: 60%;
-          // background-color: green;
-          font-size: 1em;
-          // margin: 0 auto;
+          font-size: 2em;
         }
       }
     }
   }
 }
 
-
-
-
-
-
-// @media only screen and (max-width: 300px) { 
+// @media only screen and (max-width: 300px) {
 //   .ug-foyer {
 //     background-color: blue;
 //     width: 300px;
@@ -311,71 +283,69 @@
 //   }
 // }
 
-
 //--- HEIGHT ---
 
-@media only screen and (max-height: 500px) { 
-  .ug-foyer {
-    // background-color: purple;
-    // width: 100%;
-    // position: absolute;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    .ug-foyer-intro {
-      height: 500px;
-      // width: 100%;
-      // z-index: 0;
-      // position: relative;
-      .ug-foyer-intro-about {
-        // position: absolute;
-        // color: rgba(255, 255, 255, 0.5);
-        // font-family: ZCOOL_QingKe_HuangYou;
-        // font-size: 40px;
-        // display: inline-block;
-        // left: 50%;
-        // transform: translateX(-50%);
-        // top: calc(100% - 100px);
-        // transition: font-size 1s, color 1s;
-        // &:hover {
-        //   font-size: 60px;
-        //   color: rgba(255, 255, 255, 1);
-        //   cursor: pointer;
-        // }
-      }
-      #ug-foyer-box {
-        // position: absolute;
-        // width: 50%;
-        // color: white;
-        // padding: 20px;
-        // display: inline-block;
-        // pointer-events: none;
-        // background-color: red;
-        // left: 50%;
-        // transform: translateX(-50%);
-        // top: 30%;
+// @media only screen and (max-height: 500px) {
+//   .ug-foyer {
+//     // background-color: purple;
+//     // width: 100%;
+//     // position: absolute;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // align-items: center;
+//     .ug-foyer-intro {
+//       // height: 500px;
+//       // width: 100%;
+//       // z-index: 0;
+//       // position: relative;
+//       .ug-foyer-intro-about {
+//         // position: absolute;
+//         // color: rgba(255, 255, 255, 0.5);
+//         // font-family: ZCOOL_QingKe_HuangYou;
+//         // font-size: 40px;
+//         // display: inline-block;
+//         // left: 50%;
+//         // transform: translateX(-50%);
+//         // top: calc(100% - 100px);
+//         // transition: font-size 1s, color 1s;
+//         // &:hover {
+//         //   font-size: 60px;
+//         //   color: rgba(255, 255, 255, 1);
+//         //   cursor: pointer;
+//         // }
+//       }
+//       #ug-foyer-box {
+//         // position: absolute;
+//         // width: 50%;
+//         // color: white;
+//         // padding: 20px;
+//         // display: inline-block;
+//         // pointer-events: none;
+//         // background-color: red;
+//         // left: 50%;
+//         // transform: translateX(-50%);
+//         // top: 30%;
 
-        .fullLogo{
-          // width: 100%;
-          // height: 100px;
-        }
-        .ug-foyer-text {
-          // font-family: ZCOOL_QingKe_HuangYou;
-          // color: rgba(255, 255, 255, 0.75);
-          // position: relative;
-          // width: 60%;
-          // // background-color: green;
-          // font-size: 1em;
-          // // margin: 0 auto;
-        }
-      }
-    }
-  }
-}
+//         .fullLogo{
+//           // width: 100%;
+//           // height: 100px;
+//         }
+//         .ug-foyer-text {
+//           // font-family: ZCOOL_QingKe_HuangYou;
+//           // color: rgba(255, 255, 255, 0.75);
+//           // position: relative;
+//           // width: 60%;
+//           // // background-color: green;
+//           // font-size: 1em;
+//           // // margin: 0 auto;
+//         }
+//       }
+//     }
+//   }
+// }
 
-
-@media screen and (min-height: 1500px) and (max-width: 1000px) { 
+@media screen and (min-height: 1500px) and (max-width: 1000px) {
   .ug-foyer {
     position: absolute;
     display: flex;
@@ -383,10 +353,6 @@
     justify-content: center;
     align-items: center;
     .ug-foyer-intro {
-      height: 100vh;
-      width: 100%;
-      z-index: 0;
-      position: relative;
       .ug-foyer-intro-about {
         position: absolute;
         color: rgba(255, 255, 255, 0.5);
@@ -413,7 +379,7 @@
         left: 50%;
         transform: translateX(-50%);
         top: 30%;
-        .fullLogo{
+        .fullLogo {
           width: 100%;
           height: 200px;
         }
@@ -421,10 +387,8 @@
           font-family: ZCOOL_QingKe_HuangYou;
           color: rgba(255, 255, 255, 0.75);
           position: relative;
+          background-color: green;
           width: 60%;
-          // background-color: green;
-          
-          // margin: 0 auto;
         }
       }
     }

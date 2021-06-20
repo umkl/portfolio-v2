@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // import Link from "next/link";
 import Head from "next/head";
 import FullLogo from "./../assets/UNGAR-FULL.svg";
+import useWindowDimensions from "../utils/useWindowDimensions";
 
 // import useOnScreen from "../../utils/useOnScreen.jsx"
 import VisibilitySensor from "react-visibility-sensor";
@@ -16,9 +17,14 @@ import UgAboutCard from "./../components/about/about.jsx";
 // import useOnScreen from "../utils/useOnScreen.jsx";
 // import { Helmet } from 'react-helmet'
 
+
 export default function Foyer() {
   const ref = useRef();
   const [isLoaded, setLoaded] = useState(false);
+
+  const { height, width } = useWindowDimensions();
+  // const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
 
   const ugFoyerNameSpring = useSpring({
     opacity: isLoaded ? 1 : 0,
@@ -61,7 +67,7 @@ export default function Foyer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <div className="ug-foyer-intro">
+        <div className="ug-foyer-intro" style={{height:height}}>
           <a.div
             style={ugFoyerAboutHeadingSpring}
             onClick={() => {
