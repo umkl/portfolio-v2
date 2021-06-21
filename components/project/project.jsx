@@ -9,9 +9,9 @@ const UgProject = (props) => {
   if (props.Title != "Trailer") {
     return (
       <a.div style={props.style} className="ug-project">
-        <div className="image">
+        {/* <div className="image">
           <img className="image-class" src={props.Image} alt="image here" />
-        </div>
+        </div> */}
         <div className="text">
           <div className="ug-project-title">{props.Title}</div>
           <div className="ug-project-slogan">{props.Slogan}</div>
@@ -32,7 +32,7 @@ const UgProject = (props) => {
       <a.div style={props.style} className="ug-trailer">
         <div className="ug-project-title"> More Projects coming soon</div>
         <div className="ug-project-you">
-          Maybe my next Project could be yours!
+          Want to create a project together?
         </div>
         <div className="ug-project-contact">
           <div className="ug-project-contact-first">Contact me</div>

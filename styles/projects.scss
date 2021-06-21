@@ -17,13 +17,15 @@
   position: relative;
   width: 90vw;
   height: 60vh;
-  top: 50%;
+  // top: 60%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // background-color: yellow;
+  top: 100px;
+  
+  transform: translateX(-50%);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: red;
 }
 
 // --- NAVIGATOR ---

@@ -1,20 +1,17 @@
 .ug-project {
   position: absolute;
   font-family: "ZCOOL QingKe HuangYou", cursive;
-
   width: 100%;
-  // background-color: transparent;
-  // border-radius: 15px;
-  border: 2px solid white;
+  height: fit-content;
+  background-color: blue;
   color: white;
   box-sizing: border-box;
   padding: 30px;
   margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-content: space-between;
-
-
+  // display: flex;
+  // justify-content: center;
+  // align-content: space-between;
+  
   .ug-project-title {
     font-size: 5em;
   }
@@ -137,36 +134,33 @@
   }
 }
 
-@media only screen and (max-width: 1600px){
-  .ug-project {
-    font-family: "ZCOOL QingKe HuangYou", cursive;
-    // border-radius: 15px;
-    border: 2px solid white;
-    color: white;
-    
-    box-sizing: border-box;
-    padding: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-    padding: 10px;
-    .ug-project-title {
-      margin: 3px;
-      font-size: 5em;
-    }
-    .ug-project-description {
-      margin: 20px;
-    }
-  }
-}
+// @media only screen and (max-width: 1600px){
+//   .ug-project {
+//     font-family: "ZCOOL QingKe HuangYou", cursive;
+//     color: white;
+//     box-sizing: border-box;
+//     padding: 30px;
+//     margin-bottom: 30px;
+//     display: flex;
+//     justify-content: center;
+//     align-content: space-between;
+//     padding: 10px;
+//     .ug-project-title {
+//       margin: 3px;
+//       font-size: 5em;
+//     }
+//     .ug-project-description {
+//       margin: 20px;
+//     }
+//   }
+// }
 
 
-@media only screen and (max-height: 500px){
-  .ug-trailer{
-    height: 500px;
-  }
-}
+// @media only screen and (max-height: 500px){
+//   .ug-trailer{
+//     height: 500px;
+//   }
+// }
 
 a:visited { 
   text-decoration: none; 

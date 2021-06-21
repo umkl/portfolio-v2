@@ -89,7 +89,9 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <div className="ug-contact-container">
+
+        
+        {/* <div className="ug-contact-container">
           <div className="ug-contact-frame">
             <div className="ug-contact-links">
               <div className="ug-contact-links-pos">
@@ -158,7 +160,7 @@ export default function Contact() {
               </form>
             </a.div>
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </React.Fragment>
   );
