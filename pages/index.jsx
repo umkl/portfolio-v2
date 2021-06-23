@@ -67,8 +67,8 @@ export default function Foyer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <div className="ug-foyer-intro" style={{height:height}}>
-          <a.div
+        {/* <div className="ug-foyer-intro" style={{height:height}}> */}
+          {/* <a.div
             style={ugFoyerAboutHeadingSpring}
             onClick={() => {
               setY({
@@ -81,15 +81,15 @@ export default function Foyer() {
             className="ug-foyer-intro-about"
           >
             about
-          </a.div>
-          <div id="ug-foyer-box">
+          </a.div> */}
+          {/* <div id="ug-foyer-box">
             <a.div className="ug-foyer-name" style={ugFoyerNameSpring}>
               <FullLogo width="80%" height="200" className="fullLogo" />
             </a.div>
             <div className="ug-foyer-text">Programming and Blogging</div>
-          </div>
-        </div>
-        <VisibilitySensor
+          </div> */}
+        {/* </div> */}
+        {/* <VisibilitySensor
           partialVisibility
           onChange={(isVis) => {
             if (isVis && isVisible != true) {
@@ -127,7 +127,7 @@ export default function Foyer() {
         <div className="bottom-bar">
           <div className="date">2018 - <div className="infinity">&infin;</div></div>
           <div className="legal">Legal</div>
-        </div>
+        </div> */}
       </motion.div>
     </>
   );

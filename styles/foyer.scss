@@ -5,8 +5,11 @@
 }
 
 .ug-foyer {
+  // width: 90vw;
   width: 100%;
+  height: 100%;
   position: absolute;
+  background-color: aqua;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +18,8 @@
     // min-height: 100vh;
     // min-height: -webkit-fill-available;
     // height: 100vh;
-    width: 100%;
+    background-color: blue;
+    // width: 100%;
     z-index: 0;
     position: relative;
     .ug-foyer-intro-about {
@@ -106,14 +110,7 @@
   .about-introbox {
     width: 90%;
   }
-
   .ug-foyer {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     .ug-foyer-intro {
       .ug-foyer-intro-about {
         position: absolute;
@@ -163,22 +160,8 @@
   .about-introbox {
     width: 80%;
   }
-
-  // .about-greeting{
-  //   font-size: 2em;
-  // }
-
-  // .about-introduction{
-  //   font-size: 2em;
-  // }
-
   .ug-foyer {
     width: 600px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     .ug-foyer-intro {
       background-color: red;
       .ug-foyer-intro-about {
@@ -345,11 +328,6 @@
 
 @media screen and (min-height: 1500px) and (max-width: 1000px) {
   .ug-foyer {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     .ug-foyer-intro {
       .ug-foyer-intro-about {
         position: absolute;

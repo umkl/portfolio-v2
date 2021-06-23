@@ -89,8 +89,8 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-
         
+
         {/* <div className="ug-contact-container">
           <div className="ug-contact-frame">
             <div className="ug-contact-links">
