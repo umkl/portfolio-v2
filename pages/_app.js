@@ -9,6 +9,7 @@ import "../styles/login.scss";
 import "../styles/global.scss";
 import "../styles/variables.scss";
 import "../styles/font.scss";
+import "../styles/comingsoon.scss";
 
 import "./../components/about/about.scss";
 import "./../components/bar/bar.scss";

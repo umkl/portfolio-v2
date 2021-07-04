@@ -12,7 +12,7 @@ import VisibilitySensor from "react-visibility-sensor";
 
 //local components
 // import UgArrow from "../components/arrow/arrow.jsx";
-import About from "./../assets/about.svg";
+import {About} from "./../assets/about.jsx";
 import UgAboutCard from "./../components/about/about.jsx";
 // import useBreakpointInText from "../utils/useBreakpointInText.jsx";
 // import useOnScreen from "../utils/useOnScreen.jsx";

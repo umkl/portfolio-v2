@@ -29,7 +29,7 @@ const UgBtn = () => {
       <div className="ug-btn">
         <Link className="ug-nav-link" href="/login">
           <a>
-            <div className="ug-btn-login">login</div>
+          <div className="ug-btn-login"><Loginbtn/></div>
           </a>
         </Link>
       </div>
@@ -39,7 +39,7 @@ const UgBtn = () => {
       <div className="ug-btn">
         <a>
           <Link className="ug-nav-link" href="/login">
-            <div className="ug-btn-login">login</div>
+          <div className="ug-btn-login"><Loginbtn/></div>
           </Link>
         </a>
       </div>
@@ -50,7 +50,7 @@ const UgBtn = () => {
         <div className="ug-btns">
           <Link className="ug-nav-link" href="/login">
             <a>
-              <div className="ug-btn-login">login</div>
+              <div className="ug-btn-login"><Loginbtn/></div>
             </a>
           </Link>
         </div>
@@ -67,7 +67,7 @@ const UgBtn = () => {
       <div className="ug-btn">
         <Link className="ug-nav-link" href="/login">
           <a>
-            <div className="ug-btn-login">login</div>
+          <div className="ug-btn-login"><Loginbtn/></div>
           </a>
         </Link>
       </div>
