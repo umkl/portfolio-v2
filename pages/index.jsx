@@ -12,6 +12,7 @@ import VisibilitySensor from "react-visibility-sensor";
 
 //local components
 // import UgArrow from "../components/arrow/arrow.jsx";
+import About from "./../assets/about.svg";
 import UgAboutCard from "./../components/about/about.jsx";
 // import useBreakpointInText from "../utils/useBreakpointInText.jsx";
 // import useOnScreen from "../utils/useOnScreen.jsx";
@@ -78,7 +79,8 @@ export default function Foyer() {
             }}
             className="ug-foyer-intro-about"
           >
-            about
+            <div className="about-element"><About/></div>
+            
           </a.div>
           <div id="ug-foyer-box">
             <a.div className="ug-foyer-name" style={ugFoyerNameSpring}>

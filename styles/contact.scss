@@ -59,9 +59,11 @@
   height: 100%;
   position: fixed;
   width: 100%;
+  align-items: center;
 
   .ug-contact-container {
     width: 100vw;
+    background-color: red;
     height: 100vh;
     position: absolute;
     display: flex;
@@ -123,14 +125,6 @@
           }
         }
       }
-    }
-    .ug-contact-frame {
-      position: relative;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
     .ug-contact-input {

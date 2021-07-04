@@ -4,6 +4,8 @@ import { SearchContext } from "./../../context/SearchContext";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Loginbtn from "./../../assets/loginbtn.svg";
+import FullLogo from "./../../assets/UNGAR-FULL.svg";
 
 const UgBtn = () => {
   const router = useRouter();
@@ -17,7 +19,7 @@ const UgBtn = () => {
       <div className="ug-btn">
         <Link className="ug-nav-link" href="/login">
           <a>
-            <div className="ug-btn-login">login</div>
+            <div className="ug-btn-login"><Loginbtn/></div>
           </a>
         </Link>
       </div>

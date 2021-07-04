@@ -10,6 +10,11 @@ import { config, useTransition, useSpring, animated as a } from "react-spring";
 import _uniqueId from "lodash/uniqueId";
 import Head from "next/head";
 import Image from "next/image";
+import Navright from "./../assets/navright.svg";
+import Navleft from "./../assets/navleft.svg";
+import Navbox from "./../assets/navbox.svg";
+import Navboxactive from "./../assets/navboxactive.svg";
+
 
 import UgProject from "../components/project/project.jsx";
 // import NeighborooImage from "/assets/Neighboroo/NeighborooMockup.png";
@@ -103,7 +108,7 @@ const Projects = () => {
     return (
       <>
         <Head>
-          <title>Ungar | Projects from ungarmichael.com</title>
+          <title>Ungar | Projects from Michael Ungar</title>
         </Head>
         <motion.div
           className="ug-projects"
@@ -131,6 +136,7 @@ const Projects = () => {
           </div>
           <div className="nav-box">
             <div className="nav-left">
+              
               <div
                 className="nav-left-icon arrow"
                 onClick={() => {
@@ -138,7 +144,7 @@ const Projects = () => {
                     setIndex(index - 1);
                   }
                 }}
-              ></div>
+              ><Navleft/></div>
             </div>
             <div className="ug-project-navigator">
               {projects.map((x) => {
@@ -146,8 +152,8 @@ const Projects = () => {
                   return (
                     <div
                       key={x._id}
-                      className="ug-project-navigator-dot-active"
-                    ></div>
+                      className="ug-project-navigator-dot"
+                    ><Navboxactive/></div>
                   );
                 } else {
                   return (
@@ -155,14 +161,16 @@ const Projects = () => {
                       onClick={() => handleIndexChange(x.Title)}
                       key={x._id}
                       className="ug-project-navigator-dot"
-                    ></div>
+                    >
+                      <Navbox/>
+                    </div>
                   );
                 }
               })}
             </div>
             <div className="nav-right">
               <div
-                className="nav-left-icon"
+                className="nav-right-icon"
                 onClick={() => {
                   console.log("projectssize"+projects.length)
                   console.log("index"+index)
@@ -170,7 +178,7 @@ const Projects = () => {
                     setIndex(index + 1);
                   }
                 }}
-              ></div>
+              ><Navright/></div>
             </div>
           </div>
         </motion.div>
