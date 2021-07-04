@@ -77,9 +77,10 @@
 .ug-trailer {
   position: relative;
   font-family: "ZCOOL QingKe HuangYou", cursive;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
+  height: fit-content;
+  width: fit-content;
+  background-color: red;
+  // background-color: transparent;
   color: white;
   box-sizing: border-box;
   padding: 30px;
@@ -125,10 +126,6 @@
 
     .ug-project-contact-first {
         margin: 0px 10px;
-
-
-
-
     }
   }
 }

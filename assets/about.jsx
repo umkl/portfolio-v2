@@ -1,7 +1,6 @@
 import { animated as a, useSpring } from "react-spring";
 import React,{useState} from "react";
 
-
 export function About() {
   const [hoverStatus,setHoverStatus] = useState(false);
   const animation = useSpring({

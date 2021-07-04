@@ -52,9 +52,6 @@ const Projects = () => {
     {
       _id: _uniqueId("prefix-"),
       Title: "Trailer",
-      Description: "this is a test 3",
-      ImageID: 0,
-      Image: "/assets/Neighboroo/NeighborooMockup.png",
     },
   ];
 
