@@ -41,7 +41,7 @@ const UgProject = (props) => {
   } else {
     return (
       <a.div style={props.style} className="ug-trailer">
-        {/* <div className="ug-project-title"> More Projects coming soon</div>
+        <div className="ug-project-title"> More Projects coming soon</div>
         <div className="ug-project-you">Want to work together?</div>
         <div className="ug-project-contact">
           <div className="ug-project-contact-first">Contact me</div>
@@ -50,7 +50,7 @@ const UgProject = (props) => {
             <a>here</a>
           </span>
           </Link>
-        </div> */}
+        </div>
       </a.div>
     );
   }
