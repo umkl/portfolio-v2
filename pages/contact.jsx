@@ -4,9 +4,15 @@ import { useSpring, config, animated as a } from "react-spring";
 import emailjs from "emailjs-com";
 import UgLink from "../components/contactLink/contactlink.jsx";
 import Head from "next/head";
-import Image from 'next/image';
-
-
+import Image from "next/image";
+import Twitter from "./../assets/twitter.svg";
+import Fiverr from "./../assets/fiverr.svg";
+import Dribble from "./../assets/dribble.svg";
+import Linkedin from "./../assets/linkedin.svg";
+import Instagram from "./../assets/instagram.svg";
+import Github from "./../assets/github.svg";
+import Bar200 from "./../assets/bar200.svg";
+import Bar50 from "./../assets/bar50.svg";
 
 import { BlurContext } from "../context/BlurContext.js";
 
@@ -92,15 +98,13 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        
-        // import Twitter from './../assets/twitter.svg'
-        // import Fiverr from './../assets/fiverr.svg'
-        // import Dribble from './../assets/dribble.svg'
-        // import Linkedin from './../assets/linkedin.svg'
-        // import Instagram from './../assets/instagram.svg'
-
+        // import Twitter from './../assets/twitter.svg' // import Fiverr from
+        './../assets/fiverr.svg' // import Dribble from
+        './../assets/dribble.svg' // import Linkedin from
+        './../assets/linkedin.svg' // import Instagram from
+        './../assets/instagram.svg'
         <div className="ug-contact-container">
-            {/* <div className="ug-contact-links">
+          {/* <div className="ug-contact-links">
               <div className="ug-contact-links-pos">
                 <UgLink
                   imageSource="./../assets/twitter.svg"
@@ -144,33 +148,65 @@ export default function Contact() {
           <div className="ug-contact-frame">
             <a.div style={contactSpring} className="ug-contact-input">
               <form onSubmit={sendEmail}>
-                <div className="ug-contact-input-heading">
-                  write me an email
-                </div>
+                <div className="ug-contact-input-heading">say hello</div>
                 <div className="ug-contact-input-box">
-                  <input
-                    type="email"
-                    name="user_email"
-                    className="ug-contact-input-box-input"
-                    placeholder="enter email"
-                    required
-                  />
-                  <textarea
-                    type="text"
-                    name="message"
-                    className="ug-contact-input-box-input_text"
-                    placeholder="enter text"
-                    required
-                  />
-                  <input
+                  <div className="wrapper50">
+                    <Bar50 className="bar50" />
+                    <input
+                      type="email"
+                      name="user_email"
+                      className="ug-contact-input-box-input"
+                      placeholder="enter email"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Bar200 className="bar200" />
+                    <textarea
+                      type="text"
+                      name="message"
+                      className="ug-contact-input-box-input_text"
+                      placeholder="enter text"
+                      required
+                    />
+                  </div>
+
+                 
+                  <div className="wrapper50">
+                    <Bar50 className="bar50" />
+                    <input
                     type="submit"
                     value="submit"
                     className="ug-contact-input-box-input_submit"
                     required
                   />
+                  </div>
+
                 </div>
               </form>
-              <div className="contact-items">items</div>
+              <div className="contact-text">visit me on other platforms </div>
+              <div className="contact-items">
+                <div className="contact-item">
+                  <a href="https://github.com/ungarmichael"><Github /></a>
+                  
+                </div>
+                <div className="contact-item">
+                  <a href="https://dribbble.com/ungarmichael"><Dribble /></a>
+                </div>
+                <div className="contact-item">
+                  <a href=""></a>
+                  <Twitter />
+                </div>
+                <div className="contact-item">
+                  <a href="https://www.instagram.com/ungar_/"><Instagram /></a>
+                </div>
+                <div className="contact-item">
+                  <Linkedin />
+                </div>
+                <div className="contact-item">
+                  <Fiverr />
+                </div>
+              </div>
             </a.div>
           </div>
         </div>
