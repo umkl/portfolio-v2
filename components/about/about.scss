@@ -1,10 +1,12 @@
 .ug-foyer-about {
   height: fit-content;
-  width: 1000px;
+  width: 100%;
+  position: relative;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: white;
   align-items: flex-start;
   margin: 50px 0px;
@@ -20,26 +22,27 @@
   .about-heading-box{
     font-family: "ZCOOL QingKe HuangYou", cursive;
     width: 400px;
+    margin-left: 10px;
     // background-color: aqua;
   }
 
-  .ug-foyer-about-divider {
-    background-color:white;
-    position: relative;
-    width: 1.2px;
-    height: 90%;
-  }
+  // .ug-foyer-about-divider {
+  //   background-color:white;
+  //   position: relative;
+  //   width: 1.2px;
+  //   height: 90%;
+  // }
   .ug-foyer-about-description {
     flex: 3;
     // display: flex;
     // align-items: flex-start;
     // padding:20px;
     // justify-content: center;
-    
     text-align: left;
     // height: 100%;
     font-family: "ZCOOL QingKe HuangYou", cursive;
     font-size: 15px;
+    
     // background-color: red;
     margin: 20px;
     p {
