@@ -1,6 +1,7 @@
 .ug-projects {
   position: absolute;
   width: 99%;
+  
 }
 
 .ug-loading {
@@ -13,10 +14,12 @@
 
 .ug-project-diashow {
   position: relative;
-  width: 90vw;
+  width: 1000px;
   left: 50%;
-  top: 100px;
+  top:100px;
+  
   transform: translateX(-50%);
+  
 }
 
 

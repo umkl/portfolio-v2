@@ -33,18 +33,20 @@ const Projects = () => {
         "Neighboroo is a iOS and Android-application which is built for getting in touch with your neighbors because especially during these hard times this can be quite complicated. The whole system is divided into four categories: Messenger, Selling, Transport, and Service. In the Messenger you are able to chat with your neighbors. The Trading section is for selling goods. Car-sharing can be done in the Transport section and the service section is for Offering and receiving simple jobs.[2020]",
       Link: "Link to the Github Project",
       Image: "/assets/Neighboroo/NeighborooMockup.png",
+      Image2: "/assets/Neighboroo/NeighborooMockup2.png",
       LinkURL: "https://github.com/ungarmichael/neighboroo",
       ImageID: 0,
     },
     {
       // "_id" : ObjectId("5fa14938ee9eac91770b019b"),
       _id: _uniqueId("prefix-"),
-      Title: "Gomodoro",
-      Slogan: "Planning time properly.",
-      Description: "timer app",
+      Title: "MealLog",
+      Slogan: "Enjoying meals with others.",
+      Description: "The intension was to create an application where you can share your food in order to inspire others diet.",
       Link: "Link to the Github Project",
-      Image: "/assets/Neighboroo/NeighborooMockup.png",
-      LinkURL: "https://github.com/ungarmichael/gomodoro",
+      Image: "/assets/MealLog/MealLogMockup.png",
+      Image2: "/assets/MealLog/MealLogMockup2.png",
+      LinkURL: "https://github.com/ungarmichael/recipe-app",
       ImageID: 1,
     },
     {
@@ -126,6 +128,7 @@ const Projects = () => {
                   Slogan={Project.Slogan}
                   Link={Project.Link}
                   Image={Project.Image}
+                  Image2={Project.Image2}
                   Description={Project.Description}
                   LinkURL={Project.LinkURL}
                   key={key}
