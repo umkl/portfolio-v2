@@ -188,23 +188,22 @@ export default function Contact() {
               <div className="contact-items">
                 <div className="contact-item">
                   <a href="https://github.com/ungarmichael"><Github /></a>
-                  
                 </div>
                 <div className="contact-item">
                   <a href="https://dribbble.com/ungarmichael"><Dribble /></a>
                 </div>
                 <div className="contact-item">
-                  <a href=""></a>
-                  <Twitter />
+                  <a href="https://twitter.com/ungarmichael_"><Twitter /></a>
                 </div>
                 <div className="contact-item">
                   <a href="https://www.instagram.com/ungar_/"><Instagram /></a>
                 </div>
                 <div className="contact-item">
-                  <Linkedin />
+                <a href="https://www.linkedin.com/in/michael-ungar-9624391b4/"><Linkedin /></a>
                 </div>
                 <div className="contact-item">
-                  <Fiverr />
+                  <a href="https://www.fiverr.com/ungarmichael"><Fiverr /></a>
+                  
                 </div>
               </div>
             </a.div>
